@@ -13,86 +13,91 @@
 </head>
 
 <body>
+        
+    <h1>Shape</h1>
+
+    <!--Rectangle-->
     <h3>Rectangle</h3>
     <svg width='200' height='200'>
         <rect x='30' y='20' width='100' height='50' style="fill:blue"></rect>
     </svg>
+
+    <!--Line-->
     <h3>Line</h3>
     <svg width=200 height=200>
         <line x1='100' y1='100' x2='100' y2='200' stroke='red'></line>
         <line x1='100' y1='200' x2='200' y2='200' stroke='green'></line>
         <line x1='100' y1='100' x2='200' y2='200' stroke='blue'></line>
     </svg>
+
+    <!--Stroke-->
     <h3>Stroke<h3>
-  <svg width=200 height=200>
-    <line x1='10' y1='10' x2='110' y2='10' stroke='blue'></line>
-    <line x1='10' y1='30' x2='60' y2='30' stroke='blue' stroke-width=10></line>
-    <line x1='10' y1='60' x2='60' y2='60' stroke='blue' stroke-width=20></line>
+    <svg width=200 height=200>
+        <line x1='10' y1='10' x2='110' y2='10' stroke='blue'></line>
+        <line x1='10' y1='30' x2='60' y2='30' stroke='blue' stroke-width=10></line>
+        <line x1='10' y1='60' x2='60' y2='60' stroke='blue' stroke-width=20></line>
 
-    <line x1='10' y1='150' x2='110' y2='150' stroke='blue' stroke-width=40></line>
-    <line x1='30' y1='150' x2='140' y2='150' stroke='skyblue' stroke-width=1></line>
-  </svg>
+        <line x1='10' y1='150' x2='110' y2='150' stroke='blue' stroke-width=40></line>
+        <line x1='30' y1='150' x2='140' y2='150' stroke='skyblue' stroke-width=1></line>
+    </svg>
 
-  <h3>stroke-dasharray<h3>
-  <svg width=300 height=200>
-    <line x1='10' y1='30' x2='200' y2='30' stroke='red' stroke-width='5' stroke-dasharray="20,5"></line>
-    <line x1='10' y1='100' x2='200' y2='100' stroke='blue' stroke-width='5' stroke-dasharray="30,10,7,3"></line>
-  </svg>
+    <h3>stroke-dasharray<h3>
+    <svg width=300 height=200>
+        <line x1='10' y1='30' x2='200' y2='30' stroke='red' stroke-width='5' stroke-dasharray="20,5"></line>
+        <line x1='10' y1='100' x2='200' y2='100' stroke='blue' stroke-width='5' stroke-dasharray="30,10,7,3"></line>
+    </svg>
 
-  <h3>stroke-linecap<h3>
-  <svg width=300 height=200>
-    <line x1='20' y1='10' x2='120' y2='10'
-      stroke='red' stroke-width='30' stroke-linecap="butt" />
-    <line x1='20' y1='70' x2='120' y2='70'
-      stroke='red' stroke-width='30' stroke-linecap="round" />
-    <line x1='20' y1='130' x2='120' y2='130'
-      stroke='red' stroke-width='30' stroke-linecap="square" />
-    <line x1='20' y1='10' x2='20' y2='130' stroke="blue" stroke-width='1' />
-    <line x1=120 y1=10 x2=120 y2=130 stroke="blue" stroke-width='1' />
-  </svg>
+    <h3>stroke-linecap</h3>
+    <svg width=300 height=200>
+        <line x1='20' y1='10' x2='120' y2='10' stroke='red' stroke-width='30' stroke-linecap="butt" />
+        <line x1='20' y1='70' x2='120' y2='70' stroke='red' stroke-width='30' stroke-linecap="round" />
+        <line x1='20' y1='130' x2='120' y2='130' stroke='red' stroke-width='30' stroke-linecap="square" />
+        <line x1='20' y1='10' x2='20' y2='130' stroke="blue" stroke-width='1' />
+        <line x1=120 y1=10 x2=120 y2=130 stroke="blue" stroke-width='1' />
+    </svg>
 
-  <h3>stroke-opacity<h3>
-  <svg width=300 height=80>
-    <line x1='20' y1='10' x2='120' y2='10'
-      stroke='red' stroke-width='10' stroke-opacity="1"  />
-    <line x1='20' y1='30' x2='120' y2='30'
-      stroke='red' stroke-width='10' stroke-opacity="0.5" />
-    <line x1='20' y1='50' x2='120' y2='50'
-      stroke='red' stroke-width='10' stroke-opacity="0.1" />
-  </svg>
+    <h3>stroke-opacity</h3>
+    <svg width=300 height=80>
+        <line x1='20' y1='10' x2='120' y2='10' stroke='red' stroke-width='10' stroke-opacity="1" />
+        <line x1='20' y1='30' x2='120' y2='30' stroke='red' stroke-width='10' stroke-opacity="0.5" />
+        <line x1='20' y1='50' x2='120' y2='50' stroke='red' stroke-width='10' stroke-opacity="0.1" />
+    </svg>
 
-  <h3>stroke-linejoin<h3>
-  <svg width=300 height=400>
-    <polyline fill=none stroke-width=30 stroke=blue stroke-linejoin='mitter' points='100,160 150,110 200,160'></polyline>
-    <polyline fill=none stroke-width=30 stroke=blue stroke-linejoin='round' points='100,260 150,210 200,260'></polyline>
-    <polyline fill=none stroke-width=30 stroke=blue stroke-linejoin='bebel' points='100,360 150,310 200,360'></polyline>
-  </svg>
+    <h3>stroke-linejoin</h3>
+    <svg width=300 height=400>
+        <polyline fill=none stroke-width=30 stroke=blue stroke-linejoin='mitter' points='100,160 150,110 200,160'></polyline>
+        <polyline fill=none stroke-width=30 stroke=blue stroke-linejoin='round' points='100,260 150,210 200,260'></polyline>
+        <polyline fill=none stroke-width=30 stroke=blue stroke-linejoin='bebel' points='100,360 150,310 200,360'></polyline>
+    </svg>
 
-  <h3>stroke-miterlimit<h3>
-  <svg width=300 height=400>
-    <polyline fill=none stroke-width=20 stroke=black stroke-linejoin='mitter' points='100,150 150,100 130,150'></polyline>
-    <polyline fill=none stroke-width=20 stroke=black stroke-linejoin='mitter' stroke-miterlimit=5 points='100,300 170,250 150,300'></polyline>
-  </svg>
-  
-  <h3>stroke-dashoffset<h3>
-  <svg width=330 height=200>
-    <line x1='100' y1='100' x2='300' y2='100'
-      stroke='red' stroke-width='10' stroke-dasharray='90,10' />
-    <line x1='100' y1='150' x2='300' y2='150'
-      stroke='red' stroke-width='10' stroke-dasharray='90,10' stroke-dashoffset=50 />
-  </svg>
+    <h3>stroke-miterlimit</h3>
+    <svg width=300 height=400>
+        <polyline fill=none stroke-width=20 stroke=black stroke-linejoin='mitter' points='100,150 150,100 130,150'></polyline>
+        <polyline fill=none stroke-width=20 stroke=black stroke-linejoin='mitter' stroke-miterlimit=5 points='100,300 170,250 150,300'></polyline>
+    </svg>
+    
+    <h3>stroke-dashoffset</h3>
+    <svg width=330 height=200>
+        <line x1='100' y1='100' x2='300' y2='100'
+        stroke='red' stroke-width='10' stroke-dasharray='90,10' />
+        <line x1='100' y1='150' x2='300' y2='150'
+        stroke='red' stroke-width='10' stroke-dasharray='90,10' stroke-dashoffset=50 />
+    </svg>
 
-    <h1>도형</h1>
     <h3>사각형</h3>
     <svg width=200 height=150>
         <rect x=10 y=10 width=100 height=50 stroke=blue />
-        <rect x=10 y=80 width=100 height=50 stroke=blue rx=15 ry=15 /> </svg>
+        <rect x=10 y=80 width=100 height=50 stroke=blue rx=15 ry=15 /> 
+    </svg>
+    
     <h3>사각형 fill</h3>
     <svg width=200 height=300>
         <rect x=10 y=10 width=100 height=50 />
         <rect x=10 y=80 width=100 height=50 fill="#efef43" />
         <rect x=10 y=150 width=100 height=50 stroke=blue fill="none" />
-        <rect x=10 y=220 width=100 height=50 stroke=blue fill="rgba(15,15,255,0.5)" rx=5 ry=5 /> </svg>
+        <rect x=10 y=220 width=100 height=50 stroke=blue fill="rgba(15,15,255,0.5)" rx=5 ry=5 /> 
+    </svg>
+    
     <h3>사각형 fill-opacity</h3>
     <svg width=200 height=200>
         <rect x=10 y=10 width=100 height=80 />
@@ -100,26 +105,31 @@
         <rect x=50 y=80 width=100 height=80 fill=red fill-opacity=0.5 />
         <rect x=70 y=90 width=100 height=80 fill=green fill-opacity=0.5 /> 
     </svg>
+    
     <h3>Circle</h3>
     <svg width="100" height="100">
         <circle cx="50" cy="50" r="40" stroke="green" stroke-width="10" fill="yellow" /> 
     </svg>
     <p>stroke-width가 10이기 때문에 밖으로 5px 이 커진다.</p>
+    
     <h3>ellipse</h3>
     <svg width="300" height="300">
         <ellipse cx="80" cy="80" rx="40" ry=60 stroke="green" fill="yellow" /> 
         <ellipse cx="80" cy="200" rx="60" ry=20 stroke="brown" fill="yellow" /> 
     </svg>
+    
     <h3>polyline</h3>
     <svg width="300" height="300">
         <polyline fill=lime stroke-width=1 stroke=blue points='100,150 150,100 200,100 200,150' />
         <polyline fill=none stroke-width=1 stroke=blue points='100,280 150,230 200,230 200,280' />
     </svg>
+
     <h3>polygon</h3>
     <svg width="300" height="300">
         <polygon fill=lime stroke-width=1 stroke=blue points='100,150 150,100 200,100 200,150' />
         <p>마지막 좌표는 알아서 잡아줌</p>
     </svg>
+
     <h3>fill-rule</h3>
     <svg width="300" height="300">
         <polygon fill=lime stroke-width=1 stroke=blue points='50,50 165,50 70,125 110,10 150,125' fill-rule=nonezero />
@@ -128,28 +138,37 @@
     <p>fill-rule=nonezero 영역 전체 페인트</p>
     <p>fill-rule=evenodd 겹치는 부분은 칠하지 않음</p>
     
-    <h1>path : 이거 중요함 많이씀</h1>
+    <hr>
+
+    <h3>path</h3>
+    <span style="color:red">이거 중요함 많이씀</span>
     <p>좌표를 직선 또는 곡선으로 연결하여 선, 도형을 그린다. fill, stroke 등으로 선 도형 표현.</p>
     
     <svg width='300' height='200'>
         <path d="M100,160 L160,100 L220,160 z" fill=lime stroke-width=3 stroke=blue />
     </svg>
-    <p>d 속성에서 M은 move L은 Line 소문자는 상대좌표</p>
-    <p>z가 들어가면 선이 도형으로 변함</p>
-    <p>d attribute value 전체를 path data라고 함</p>
-    <p>M100,100을 sub-path라고 함</p>
-    <p>M100,150 L160,100 콤마로 구분</p>
-    <p>M100 150 L160 100 공백으로 분리</p>
-    <p>M100 150L160 100 파라미터로 명령어 연결</p>
-    <p>같은 명령 연속될때 다음 명령 문자 생략 가능</p>
-    <p>M100,150 L160,100 260,200 파라미터로 명령어 연결</p>
-    <p>현위치 선을 긋는 그 위치</p>
+    
+    <ol>
+        <li>d 속성에서 M은 move L은 Line 소문자는 상대좌표</li>
+        <li>z가 들어가면 선이 도형으로 변함</li>
+        <li>d attribute value 전체를 liath data라고 함</li>
+        <li>M100,100을 sub-path라고 함</li>
+        <li>M100,150 L160,100 콤마로 구분</li>
+        <li>M100 150 L160 100 공백으로 분리</li>
+        <li>M100 150L160 100 파라미터로 명령어 연결</li>
+        <li>같은 명령 연속될때 다음 명령 문자 생략 가능</li>
+        <li>M100,150 L160,100 260,200 파라미터로 명령어 연결</li>
+        <li>현위치 선을 긋는 그 위치</li>
+    </ol>
     
     <svg width='300' height='120'>
         <path d="M100,10 l100,0 L250,100 l-200,0 z" fill=yellow stroke-width=5 stroke=black />
     </svg>
+    
     <p>명령어 M(Move), L(Line), H(horizontal line), V(vertical line), Z(path complete)</p>
     
+    <hr>
+
     <h3>타원호 Elliptical arc curve</h3>
     <svg width='300' height='300'>
         <path d="M200,100 A50,50 1 1,0 200,150" fill=none stroke-width=5 stroke=brown />
@@ -161,6 +180,7 @@
     <p>sweep-flag 회전방향(시계반대:0, 시계방향:1)</p>
     <p>x x 축 끝좌표</p>
     <p>y y 축 끝좌표</p>
+    
     <svg width='500' height='400'>
        <g stroke-width=1 fill=none stroke=blue>
             <path d="M100,100 A50,50 0 1,0 150,150" fill=none stroke-width=5 stroke=darkgreen />
@@ -170,19 +190,20 @@
        <rect x=100 y=100 width=2 height=2 fill=none stroke=red />
        <rect x=100 y=250 width=2 height=2 fill=none stroke=red />
     </svg>
+    
     <svg width='300' height='300'>
         <path d="M100,100 A50,50 0 1,0 150,100" stroke=blue fill=none />
     </svg>
-     <h3></h3>
-     <svg  width='300' height='250'>
+    
+    <svg width='300' height='250'>
         <g stroke-width=1 fill=none stroke=blue>
             <line x1=200 y1=150 x2=100 y2=200 stroke=orange />
             <path d="M200,150 A80,50 0 0,0 100,200" stroke=blue></path>
             <path d="M200,150 A80,50 0 1,0 100,200" stroke=skyblue></path>
         </g>
-     </svg>
-     <h3>x축 회전 각도</h3>
-     <svg  width='300' height='300'>
+    </svg>
+    <h3>x축 회전 각도</h3>
+    <svg width='300' height='300'>
         <g stroke-width=1 fill=none>
             <path d="M200,150 A100,50 0 0,0 200,250" stroke=red></path>
             <path d="M200,150 A100,50 30 0,0 200,250" stroke=orange></path>
@@ -190,176 +211,192 @@
             <path d="M200,150 A100,50 90 0,0 200,250" stroke=green></path>
             <path d="M200,150 A100,50 150 0,0 200,250" stroke=blue></path>
         </g>
-     </svg>
-     
-     <h2>타원호 크기 구하기</h2>
-     <div>
-         <svg width=500 height=400>
-             <path id='pathId' d='M150,100 A100,50 0 1,0 250,170' fill=lime stroke=blue />
-         </svg>
-     </div>
-     <script>
-        window.onload = function(){
-            var node = document.getElementById('pathId');
-            var hash = node.getBoundingClientRect();
-            console.log(`width : ${hash.width}`);
-            console.log(`height : ${hash.height}`);
-            console.log(`top : ${hash.top}`);
-            console.log(`right : ${hash.right}`);
-            console.log(`bottom : ${hash.bottom}`);
-            console.log(`left : ${hash.left}`);
-        }
-     </script>
-     <h3>베지어 곡선</h3>
-     <svg width=300 height=300>
-         <path d='M30,150 H250' stroke=lime />
-         <path d='M30,250 L130,80 L230,250' stroke=orange fill=none />
-         <path d='M30,250 Q130,50 230,250' stroke=blue fill=none />
-     </svg>
-     <h3>2차 베지어 곡선 하나의 경유점을 지나간다.</h3>
-     <svg width=300 height=500>
-         <g fill=none>
-             <path d='M20,150 V350 M120,150 V350 M220,150 V350' stroke=red />
-             <path d='M20,250 H220 M20,150 H220 M20,350 H220' stroke=orange />
-             <path d='M20,250 Q70,50 120,250 T220,250' stroke=blue />
-         </g>
-     </svg>
-     <h3>3차 베지어 곡선 두개의 제어점을 경유하는 포물선</h3>
-     <svg width=200 height=250>
-         <g fill=none>
-            <rect x=50 y=100 width=100 height=100 
-                stroke=red stroke-width=2 fill=none />
-             <path d='M50,200 C50,100 150,100 150,200'
-                 stroke=pink />
-         </g>
-     </svg>
-     <svg width=400 height=350>
-         <g fill=none>
-            <rect x=150 y=200 width=100 height=100 
-                stroke=red stroke-width=2 fill=none />
-             <path d='M50,200 C50,100 150,100 150,200 S250,300 250,200'
-                 stroke=pink />
-         </g>
-     </svg>
-     <h3>'g' 그룹화</h3>
-     <svg width=300 height=200>
-         <g fill=none stroke=blue stroke-width='3px'>
+    </svg>
+
+    <h2>타원호 크기 구하기</h2>
+    <div>
+        <svg width=500 height=400>
+            <path id='pathId' d='M150,100 A100,50 0 1,0 250,170' fill=lime stroke=blue />
+        </svg>
+    </div>
+    <script>
+    window.onload = function(){
+        var node = document.getElementById('pathId');
+        var hash = node.getBoundingClientRect();
+        console.log(`width : ${hash.width}`);
+        console.log(`height : ${hash.height}`);
+        console.log(`top : ${hash.top}`);
+        console.log(`right : ${hash.right}`);
+        console.log(`bottom : ${hash.bottom}`);
+        console.log(`left : ${hash.left}`);
+    }
+    </script>
+
+    <hr>
+
+    <h3>베지어 곡선</h3>
+    <svg width=300 height=300>
+        <path d='M30,150 H250' stroke=lime />
+        <path d='M30,250 L130,80 L230,250' stroke=orange fill=none />
+        <path d='M30,250 Q130,50 230,250' stroke=blue fill=none />
+    </svg>
+    <h3>2차 베지어 곡선 하나의 경유점을 지나간다.</h3>
+    <svg width=300 height=500>
+        <g fill=none>
+            <path d='M20,150 V350 M120,150 V350 M220,150 V350' stroke=red />
+            <path d='M20,250 H220 M20,150 H220 M20,350 H220' stroke=orange />
+            <path d='M20,250 Q70,50 120,250 T220,250' stroke=blue />
+        </g>
+    </svg>
+    <h3>3차 베지어 곡선 두개의 제어점을 경유하는 포물선</h3>
+    <svg width=200 height=250>
+        <g fill=none>
+            <rect x=50 y=100 width=100 height=100 stroke=red stroke-width=2 fill=none />
+            <path d='M50,200 C50,100 150,100 150,200' stroke=pink />
+        </g>
+    </svg>
+    <svg width=400 height=350>
+        <g fill=none>
+            <rect x=150 y=200 width=100 height=100 stroke=red stroke-width=2 fill=none />
+            <path d='M50,200 C50,100 150,100 150,200 S250,300 250,200' stroke=pink />
+        </g>
+    </svg>
+
+    <hr>
+    <h3>'g' 그룹화</h3>
+    <svg width=300 height=200>
+        <g fill=none stroke=blue stroke-width='3px'>
             <line x1=100 y1=100 x2=150 y2=100></line>
             <line x1=150 y1=150 x2=150 y2=50></line>
-         </g>
-     </svg>
-     <h2>use</h2>
-     <svg width=500 height=600>
-         <g id='groupID' stroke="blue">
+        </g>
+    </svg>
+    <h2>use</h2>
+    <svg width=500 height=600>
+        <g id='groupID' stroke="blue">
             <rect id=rectID x=100 y=100 width=100 height=100 fill=none />
             <circle cx=150 cy=150 r=40 fill=lime />
-         </g>
-         <use x=0 y=150 xlink:href="#groupID" />
-         <use x=0 y=300 xlink:href="#rectID" stroke=green stroke-width=2 stroke-dasharray="10,4" />
-     </svg>
+        </g>
+        <use x=0 y=150 xlink:href="#groupID" />
+        <use x=0 y=300 xlink:href="#rectID" stroke=green stroke-width=2 stroke-dasharray="10,4" />
+    </svg>
      
-     <h2>defs 미리 참조할 것들을 만들어놓고</h2>
-     <svg width=300 height=300>
-         <defs>
-             <g id="groupId2">
-                 <rect id=rectId2 x=0 y=0 width=100 height=100 stroke=blue fill=none />
-                 <circle cx=50 cy=50 r=40 fill=lime />
-             </g>
-         </defs>
-         <use x=100 y=150 xlink:href="#groupId2" fill=blue stroke-dasharray=10,4 />
-     </svg>
-     <h2>symbol 권장됨</h2>
-     <svg width=500 height=500>
-         <line x1=100 y1=80 x2=200 y2=80 stroke=red stroke-width=3 />
-         <symbol id=symbolOne>
-             <rect id="rectId3" x=0 y=0 width=100 height=100 fill=Aqua />
-             <circle cx=50 cy=50 r=40 fill=blue />
-         </symbol> 
+    <h2>'defs' 미리 참조할 것들을 만들어놓고 나중에 컴포넌트처럼 사용</h2>
+    <svg width=300 height=300>
+        <defs>
+            <g id="groupId2">
+                <rect id=rectId2 x=0 y=0 width=100 height=100 stroke=blue fill=none />
+                <circle cx=50 cy=50 r=40 fill=lime />
+            </g>
+        </defs>
+        <use x=100 y=150 xlink:href="#groupId2" fill=blue stroke-dasharray=10,4 />
+    </svg>
+
+    <h2>symbol (권장됨)</h2>
+    <svg width=500 height=500>
+        <line x1=100 y1=80 x2=200 y2=80 stroke=red stroke-width=3 />
+        <symbol id=symbolOne>
+            <rect id="rectId3" x=0 y=0 width=100 height=100 fill=Aqua />
+            <circle cx=50 cy=50 r=40 fill=blue />
+        </symbol>
         <use x=100 y=100 xlink:href="#symbolOne" width=200 height=200 />
-         
+
         <!-- symbol을 쓰는 이유는 viewbox 늘일 수 있다 -->
         <symbol id=symbolTwo viewBox="0 0 250 250">
-             <rect id="rectId4" x=0 y=0 width=100 height=100 fill=Aqua />
-             <circle cx=50 cy=50 r=40 fill=blue />
-         </symbol>
-         <use x=100 y=250 xlink:href="#symbolTwo" width=200 height=200 />
-     </svg>
+            <rect id="rectId4" x=0 y=0 width=100 height=100 fill=Aqua />
+            <circle cx=50 cy=50 r=40 fill=blue />
+        </symbol>
+        <use x=100 y=250 xlink:href="#symbolTwo" width=200 height=200 />
+    </svg>
+
+    <hr>
+    
+    <h1>font / text</h1>
+
+    <h2>title</h2>
+    <svg width=200 height=200>
+        <g id="groupId4">
+        <title>사각형과 원</title>
+        <!-- 마우스 올려놓으면 뜨는 이미지의 alt 개념 -->
+            <rect id=rectId4 x=20 y=20 width=100 height=100 stroke=blue fill=none />
+            <circle cx=70 cy=100 r=40 fill=lime />
+        </g>
+    </svg>
      
-     <h2>title</h2>
-     <svg width=200 height=200>
-         <g id="groupId4">
-            <title>사각형과 원</title>
-            <!-- 마우스 올려놓으면 뜨는 이미지의 alt 개념 -->
-             <rect id=rectId4 x=20 y=20 width=100 height=100 stroke=blue fill=none />
-             <circle cx=70 cy=100 r=40 fill=lime />
-         </g>
-     </svg>
-     
-     <h3>desc</h3>
-     <p>스크린리더 영역, 툴팁에 출력되진 않음</p>
-     <h2>title</h2>
-     <svg width=200 height=200>
-         <g id="groupId5">
+    <h3>desc</h3>
+    <p>스크린리더 영역, 툴팁에 출력되진 않음</p>
+    <h2>title</h2>
+    <svg width=200 height=200>
+        <g id="groupId5">
             <desc>사각형과 원</desc>
-             <rect x=20 y=20 width=100 height=100 stroke=blue fill=none />
-             <circle cx=70 cy=100 r=40 fill=lime />
-         </g>
-     </svg>
+            <rect x=20 y=20 width=100 height=100 stroke=blue fill=none />
+            <circle cx=70 cy=100 r=40 fill=lime />
+        </g>
+    </svg>
+    
+    <h3>text</h3>
+    <svg width=500 height=400>
+        <text x=60 y=150 font-size=34>여행, 괜찮음 박준호</text>
+        <line x1=50 y1=150 x2=340 y2=150 stroke=orange stroke-width=1></line>
+        
+        <text x=60 y=220 font-size=34 font-family="Verdana">Hello World! grapts</text>
+        <line x1=50 y1=220 x2=250 y2=220 stroke=orange stroke-width=1></line>
+    </svg>
      
-     <h3>text</h3>
-     <svg width=500 height=400>
-         <text x=60 y=150 font-size=34>여행, 괜찮음 박준호</text>
-         <line x1=50 y1=150 x2=340 y2=150 stroke=orange stroke-width=1></line>
-         
-         <text x=60 y=220 font-size=34 font-family="Verdana">Hello World! grapts</text>
-         <line x1=50 y1=220 x2=250 y2=220 stroke=orange stroke-width=1></line>
-     </svg>
-     
-     <h3>text dx,dy 속성</h3>
-     <svg width=500 height=300>
-         <text x=100 y=150 font-size=34>가나다라</text>
-         <path d="M100,100 V250" stroke=red />
-         <text x=100 y=200 font-size=34 dx='-50'>마바사아</text>
-     </svg>
-     
-     <h3>textLength / lengthAdjust / rotate / text-anchor </h3>
-     <svg width=500 height=1100>
-         <text x=100 y=60 font-size=36>가나다라마</text>
-         <text x=100 y=110 font-size=36 textLength=130>가나다라마</text>
-<!--         36px 기준 텍스트 너비는 170px -->
-         <text x=100 y=170 font-size=36 textLength=250>가나다라마</text>
-         <text x=100 y=250 textLength=250>바사아자차카타파하</text>
-         <text x=100 y=300 textLength=250 lengthAdjust=spacingAndGlyphs>바 사아 자차카타파하</text>
-         <text x=100 y=350 rotate=30>rotate</text>
-         <text x=100 y=380 rotate="0,0,90,150,45">rotate</text>
-         <line x1=100 y1=400 x2=100 y2=510 stroke=red stroke-width=1 />
-         <text x=100 y=420 text-anchor=start>text-anchor</text>
-         <text x=100 y=460 text-anchor=middle>text-anchor</text>
-         <text x=100 y=500 text-anchor=end>text-anchor</text>
-         
-<!--         텍스트 표시 방향 -->
-         <text x=100 y=540 writing-mode='rl-tb'>writting-mode</text>
-         <text x=100 y=540 writing-mode='tb-rl'>롸이팅-모드으</text>
-         
-         <text x=100 y=700 kerning=10>kerning 12345</text>
-         <text x=100 y=720 kerning=10 letter-spacing=10>kerning 12345</text>
-         
-         <text x=100 y=750 kerning=10>word spacing</text>
-         <text x=100 y=770 kerning=10 word-spacing=10>word spacing</text>
-         
-         <text x='100 120 10 50' y='790 800 810'>간격 지정 가능</text>
-         
-         <text x=100 y=840 text-decoration="underline">text-decoration underline</text>
-         <text x=100 y=865 text-decoration="overline">text-decoration overline</text>
-         <text x=100 y=890 text-decoration="line-through">text-decoration line-through</text>
-         
-         <text x=100 y=920 fill=blue font-size=18>fill, stroke</text>
-         <text x=100 y=960 fill=none stroke=blue font-size=18>fill, stroke</text>
-         <text x=100 y=1000 fill=red stroke=blue font-size=18>fill, stroke</text>
-         <text x=100 y=1040 font-size=16 fill=red stroke=green stroke-width=2 stroke-dasharray='5,1'>fill, stroke</text>
-         
-         
-     </svg>
+    <h3>text dx,dy 속성</h3>
+    <svg width=500 height=300>
+        <text x=100 y=150 font-size=34>가나다라</text>
+        <path d="M100,100 V250" stroke=red />
+        <text x=100 y=200 font-size=34 dx='-50'>마바사아</text>
+    </svg>
+    
+    <h3> textLength / lengthAdjust / rotate / text-anchor </h3>
+    <svg width=500 height=1100>
+        <!--font-size-->
+        <text x=100 y=60 font-size=36>가나다라마</text>
+        <!--textLength-->
+        
+        <!-- 36px 기준 텍스트 너비는 170px -->
+        <text x=100 y=110 font-size=36 textLength=130>가나다라마</text>
+        <text x=100 y=170 font-size=36 textLength=250>가나다라마</text>
+        <text x=100 y=250 textLength=250>바사아자차카타파하</text>
+        
+        <!--lengthAdjust-->
+        <text x=100 y=300 textLength=250 lengthAdjust=spacingAndGlyphs>바 사아 자차카타파하</text>
+        
+        <!--rotate-->
+        <text x=100 y=350 rotate=30>rotate</text>
+        <text x=100 y=380 rotate="0,0,90,150,45">rotate</text>
+        <line x1=100 y1=400 x2=100 y2=510 stroke=red stroke-width=1 />
+        
+        <!--text-anchor-->
+        <text x=100 y=420 text-anchor=start>text-anchor</text>
+        <text x=100 y=460 text-anchor=middle>text-anchor</text>
+        <text x=100 y=500 text-anchor=end>text-anchor</text>
+        
+        <!-- wightting-mode 텍스트 표시 방향 -->
+        <text x=100 y=540 writing-mode='rl-tb'>writting-mode</text>
+        <text x=100 y=540 writing-mode='tb-rl'>롸이팅-모드으</text>
+        
+        <!--kerning-->
+        <text x=100 y=700 kerning=10>kerning 12345</text>
+        <text x=100 y=720 kerning=10 letter-spacing=10>kerning 12345</text>
+        <text x=100 y=750 kerning=10>word spacing</text>
+        <text x=100 y=770 kerning=10 word-spacing=10>word spacing</text>
+
+        <!--text 간격 지정-->
+        <text x='100 120 10 50' y='790 800 810'>간격 지정 가능</text>
+        <text x=100 y=840 text-decoration="underline">text-decoration underline</text>
+        <text x=100 y=865 text-decoration="overline">text-decoration overline</text>
+        <text x=100 y=890 text-decoration="line-through">text-decoration line-through</text>
+        
+        <!--fill-->
+        <text x=100 y=920 fill=blue font-size=18>fill, stroke</text>
+        <text x=100 y=960 fill=none stroke=blue font-size=18>fill, stroke</text>
+        <text x=100 y=1000 fill=red stroke=blue font-size=18>fill, stroke</text>
+
+        <!--fill / stroke-dasharray-->
+        <text x=100 y=1040 font-size=16 fill=red stroke=green stroke-width=2 stroke-dasharray='5,1'>fill, stroke</text>
+    </svg>
      
 </body>
 
