@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SVG 두 번째 수업</title>
+    <script src="lib/d3.v4.js"></script>
+    <style media="screen">
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        svg {
+            display: block;
+            border: 1px solid black;
+            padding: 0;
+            margin-bottom: 20px;
+        }
+        hr{
+            width:100vw;
+            margin:0;
+        }
+    </style>
+</head>
+<body>
+    <h1>Font</h1>
+    <h3>font-family</h3>
+    <h3>font-style</h3>
+    <svg width=300 height=200>
+        <text x=10 y=50 fill=blue font-family=18>fill, stroke</text>
+    </svg>
+
+
+    <h1>viewBox</h1>
+    <!--viewBox-->
+    <svg width=200 height=200 viewBox="0 0 200 200">
+        <rect x=0 y=0 width=200 height=200 fill=none stroke=red stroke-width=10 />
+        <circle cx=0 cy=0 r=50 fill=lime />
+        <circle cx=200 cy=0 r=50 fill=green />
+        <circle cx=100 cy=100 r=50 fill=blue />
+        <circle cx=0 cy=200 r=50 fill=orchid />
+        <circle cx=200 cy=200 r=50 fill=gray />
+    </svg>
+    
+    <h1>viewbox 음수 영역</h1>
+    <svg width=200 height=200 viewBox="-50 -50 200 200">
+        <rect x=0 y=0 width=200 height=200 fill=none stroke=red />
+        <circle cx=0 cy=0 r=50 fill=lime />
+        <circle cx=200 cy=0 r=50 fill=green />
+        <circle cx=100 cy=100 r=50 fill=blue />
+        <circle cx=0 cy=200 r=50 fill=orchid />
+        <circle cx=200 cy=200 r=50 fill=gray />
+    </svg>
+
+    <h1>viewbox 비율로 축소</h1>
+    <svg width=200 height=200 viewBox="-50 -50 300 300">
+        <rect x=0 y=0 width=200 height=200 fill=none stroke=red />
+        <circle cx=0 cy=0 r=50 fill=lime />
+        <circle cx=200 cy=0 r=50 fill=green />
+        <circle cx=100 cy=100 r=50 fill=blue />
+        <circle cx=0 cy=200 r=50 fill=orchid />
+        <circle cx=200 cy=200 r=50 fill=gray />
+    </svg>
+    <svg width=200 height=200 viewBox="-50 -50 150 150">
+        <rect x=0 y=0 width=200 height=200 fill=none stroke=red />
+        <circle cx=0 cy=0 r=50 fill=lime />
+        <circle cx=200 cy=0 r=50 fill=green />
+        <circle cx=100 cy=100 r=50 fill=blue />
+        <circle cx=0 cy=200 r=50 fill=orchid />
+        <circle cx=200 cy=200 r=50 fill=gray />
+    </svg>
+    
+    <h3>viewbox test</h3>
+    <svg width=150 height=150 id='svg-event'>
+        <circle cx=0 cy=0 r=50 fill=cyan />
+        <circle cx=150 cy=0 r=50 fill=magenta />
+        <circle cx=0 cy=150 r=50 fill=yellow />
+        <circle cx=150 cy=150 r=50 fill=black />
+        <circle cx=75 cy=75 r=50 fill=#ddd />
+    </svg>
+    <svg width=150 height=150 viewbox='-50 -50 250 250'>
+        <circle cx=0 cy=0 r=50 fill=cyan />
+        <circle cx=150 cy=0 r=50 fill=magenta />
+        <circle cx=0 cy=150 r=50 fill=yellow />
+        <circle cx=150 cy=150 r=50 fill=black />
+        <circle cx=75 cy=75 r=50 fill=#ddd />
+    </svg>
+    <svg width=150 height=150 viewbox='25 25 100 100'>
+        <circle cx=0 cy=0 r=50 fill=cyan />
+        <circle cx=150 cy=0 r=50 fill=magenta />
+        <circle cx=0 cy=150 r=50 fill=yellow />
+        <circle cx=150 cy=150 r=50 fill=black />
+        <circle cx=75 cy=75 r=50 fill=#ddd />
+    </svg>
+    <button type="button" id='zoom-in'>확대</button>
+    <button type="button" id='zoom-out'>축소</button>
+    <script>
+        window.onload = function(){
+            let zoomIn = document.getElementById('zoom-in');
+            let zoomOut = document.getElementById('zoom-out');
+            let svgTarget = document.getElementById('svg-event');
+            let currentWidthHeight = 150;
+            zoomIn.onclick = function(e){
+                currentWidthHeight -= 20;
+                svgTarget.setAttribute('viewBox', 0 + " " + 0 + " " + currentWidthHeight + " " + currentWidthHeight);
+            }
+            zoomOut.onclick = function(e){
+                currentWidthHeight += 20;
+                svgTarget.setAttribute('viewBox', 0 + " " + 0 + " " + currentWidthHeight + " " + currentWidthHeight);
+            }
+        }
+    </script>
+
+    <h3>transform - translate</h3>
+    <svg width=300 height=300>
+        <rect x=50 y=50 width=100 height=100 fill=none stroke=black />
+        <rect x=50 y=50 width=100 height=100 transform="translate(50,50)" fill=lime stroke=blue />
+    </svg>
+    
+    <h3>transform - scale</h3>
+    <svg width=300 height=300 viewBox="0 0 300 300">
+        <rect x=1 y=1 width=200 height=200 fill=none stroke=royalblue />
+        <rect x=50 y=50 width=50 height=50 fill=tomato stroke=royalblue />
+        <rect x=60 y=60 width=50 height=70 fill=yellow stroke=orange transform="scale(2.0,2.0)" />
+    </svg>
+
+
+    <h3>transform - scale 음수</h3>
+    <svg width=300 height=300>
+        <rect x=50 y=50 width=50 height=50 transform='scale(-1,-1)' fill=lime />
+        <rect x=50 y=50 width=50 height=50 transform='scale(-0.5,-0.5)' fill=blue stroke-width=1 />
+    </svg>
+    
+    <h3>rotate</h3>
+    <svg width=400 height=400>
+        <rect x=100 y=50 width=70 height=70 stroke=blue fill=yellow transform='rotate(45, 135, 85)' />
+        <rect x=100 y=50 width=70 height=70 stroke=blue fill=none />
+        
+        <rect x=100 y=150 width=70 height=70 stroke=blue fill=none />
+        <rect x=100 y=150 width=70 height=70 stroke=blue fill=yellow transform='rotate(30, 100, 150)' />
+        <rect x=100 y=150 width=70 height=70 stroke=blue fill=green transform='rotate(60, 100, 150)' />
+    </svg>
+
+    <h3>skewX</h3>
+    <svg width=400 height=400>
+        <rect x=0 y=0 width=50 height=50 fill=blue opacity=.7 />
+        <rect x=0 y=0 width=50 height=50 fill=orange transform='skewX(45)' opacity=.7 />
+        <rect x=0 y=50 width=50 height=50 fill=lime transform='skewX(20)' opacity=.7 />
+        <rect x=0 y=50 width=50 height=50 fill=orchid transform='skewX(45)' opacity=.7 />
+        <rect x=0 y=100 width=50 height=50 fill=pink transform='skewX(45)' opacity=.7 />    
+    </svg>
+    
+    <h3>skewY</h3>
+    <svg width=400 height=400>
+        <rect x=0 y=0 width=50 height=50 fill=blue opacity=.7 />
+        <rect x=50 y=50 width=50 height=50 fill=orange transform='skewY(45)' />
+        <rect x=0 y=50 width=50 height=50 fill=lime transform='translate(50,50) skewY(45)' opacity=.7 />
+    </svg>
+    
+    <h3>matrix</h3>
+    <svg width=400 height=400>
+        <rect x=0 y=0 width=50 height=50 fill=yellow stroke=blue />
+        <rect x=0 y=50 width=50 height=50 fill=blue transform='matrix(1,0,0,1,50,150)' />
+        <rect x=50 y=50 width=50 height=50 fill=lime transform='matrix(2.0, 0, 0, 2.0, 0, 0)' />
+        <rect x=0 y=0 width=50 height=50 fill=orchid transform='matrix(1, 0, 0.5, 1, 50, 50)' />
+        <rect x=0 y=0 width=50 height=50 fill=orange transform='matrix(1, 0.5, 0, 1, 50, 100)' />
+    </svg>
+
+    <h3>linearGradient</h3>
+    <!--linearGradient-->
+    <svg width=300 height=70>
+        <defs>
+            <!--선 형태로 색을 변화, 그라데이션 표현-->
+            <!--좌표를 작성하지 않았으므로 왼쪽에서 오른쪽으로 진행-->
+            <linearGradient id="linearId">
+                <stop offset="0%" stop-color=lime />
+                <stop offset="50%" stop-color=yellow />
+                <stop offset="100%" stop-color=orchid />
+            </lineargradient>
+        </defs>
+        <!--linearGradient를 defs에 작성하고 참고-->
+        <rect x=10 y=10 width=280 height=50 fill="url(#linearId)" />
+    </svg>
+
+    <h3>fill, stroke</h3>
+
+    <!--linearGradient-->
+    <svg width=300 height=140>
+        <defs>
+            <linearGradient id="linearId">
+                <stop offset="0%" stop-color=lime />
+                <stop offset="50%" stop-color=yellow />
+                <stop offset="100%" stop-color=orchid />
+            </lineargradient>
+        </defs>
+        <rect x=10 y=10 width=280 height=50 fill="url(#linearId)" />
+        <rect x=10 y=80 width=280 height=50 stroke="url(#linearId)" stroke-width=10 fill=none />
+    </svg>
+    
+    <hr>
+
+    <h1>pattern</h1>
+    <!--pattern-->
+    <svg width=300 height=350>
+        <defs>
+            <pattern id="id1" x=0 y=0 width=20 height=20 patternUnits=userSpaceOnUse>
+                <rect x=0 y=0 width=10 height=10 fill=gray />
+            </pattern>
+            <pattern id="id2" x=0 y=0 width=20 height=20 patternUnits=userSpaceOnUse>
+                <circle cx=10 cy=10 r=8 fill=gray />
+            </pattern>
+        </defs>
+        <rect x=20 y=40 width=200 height=100 fill="url(#id1)" stroke=blue />
+        <circle cx=100 cy=240 r=70 fill="url(#id2)" stroke=blue />
+    </svg>
+    
+</body>
+</html>
