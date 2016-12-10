@@ -9,6 +9,7 @@ window.onload = function(){
                 .attr('id','idSvgGraph')     
     }
 
+    // (1)
     // 사각형 박스 먼저 그리기 
     var object = createSVG();
 
@@ -46,10 +47,28 @@ window.onload = function(){
             })
     }
 
+    // (2) 
     // 사각형 그래프 그리기
     drawBar(object);
 
+    function drawAxis(object){
+        var axisValue = [{x:50, y:20},{x:50, y:420},{x:650, y:420}]
+        var line = d3.svg.line()
+            .x(function(value){
+                return value.x;
+            })
+            .y(function(value){
+                return value.y;
+            })
+        object.append('g')
+            .attr('class','axis')
+            .append('path')
+            .attr('d',line(axisValue));
+    }
     
+    // (3)
+    // XY 축 그리기
+    drawAxis(object);
 
     
        
