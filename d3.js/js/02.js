@@ -61,7 +61,7 @@ window.onload = function(){
                 return value.y;
             })
         object.append('g')
-            .attr('class','axis')
+            .attr('class','axis_line')
             .append('path')
             .attr('d',line(axisValue));
     }
@@ -69,6 +69,49 @@ window.onload = function(){
     // (3)
     // XY 축 그리기
     drawAxis(object);
+
+    function drawYAxis(object){
+        var yScale = d3.scale.linear()
+                        .domain([0,1000])
+                        .range([400,0]);
+        var yAsix = d3.svg.axis()
+                        .scale(yScale)
+                        .orient('left');
+        object.append('g')
+            .attr({
+                'class':'axis',
+                'transform':'translate(50,20)'
+            })
+            .call(yAsix);
+    }
+
+    // (4)
+    // Y 축 눈금 그리기
+    drawYAxis(object);
+
+    function drawXAxis(objet){
+        var data = [1,2,3,4,5,6,7,8,9,10,11,12];
+        var xScale = d3.scale.ordinal()
+                        .rangeRoundBands([0,600],0);
+        xScale.domain(data.map(function(value){
+            value += '월'
+            return value;
+        }));
+        
+        // domain()에서 설정한 데이터값 만큼 반복한다.
+        var xAxis = d3.svg.axis()
+                        .scale(xScale)
+                        .orient('bottom');
+        
+        object.append('g')
+            .attr({
+                'class':'axis',
+                'transform':'translate(50,420)'
+            }).call(xAxis);
+    }
+    // (5)
+    // X 축 눈금 그리기
+    drawXAxis(object);
 
     
        
