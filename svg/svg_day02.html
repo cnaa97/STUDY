@@ -3,7 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <title>SVG 두 번째 수업</title>
-    <script src="lib/d3.v4.js"></script>
     <style media="screen">
         body{
             font-family: Arial, Helvetica, sans-serif;
@@ -194,6 +193,175 @@
         <rect x=10 y=10 width=280 height=50 fill="url(#linearId)" />
         <rect x=10 y=80 width=280 height=50 stroke="url(#linearId)" stroke-width=10 fill=none />
     </svg>
+    
+    
+    <!--objectBoundingBox-->
+    <h3>objectBoundingBox</h3>
+    <svg width=300 height=550>
+        <defs>
+            <!--x2=1 y2=1에서 값 1은 100%와 같음-->
+            <!--좌상단에서 우하단으로 사선 모양의 그라데이션 구현-->
+            <linearGradient id='id1' x1='0%' y1='0%'x2=1 y2=1 gradientUnits='objectBoundingBox'>
+                <stop offset="0%" stop-color=blue />
+                <stop offset="50%" stop-color=white />
+                <stop offset="100%" stop-color=blue />
+            </linearGradient>
+            
+            <!--x1=50% y1=50% 부터 그라데이션을 시작하며-->
+            <!--이전까지는 그라데이션 하지 않음-->
+            <!--그라데이션 박스 영역을 좌표로 지정할 수 있음-->
+            <linearGradient id='id2' x1='50%' y1='50%'x2=1 y2=1 gradientUnits='objectBoundingBox'>
+                <stop offset="0%" stop-color=gray />
+                <stop offset="50%" stop-color=white />
+                <stop offset="100%" stop-color=black />
+            </linearGradient>
+        </defs>
+
+        <rect x=0 y=50 width=100 height=100 fill='url(#id1)' />
+        <!--타원형이지만 사각형이(0,1~1,1)좌표를 적용하여 그라데이션-->
+        <ellipse cx=70 cy=220 rx=70 ry=35 fill='url(#id1)' />
+        
+        <!--x1=50% y1=50%이므로 이전까지는 그라데이션 하지 않음-->
+        <rect x=0 y=300 width=100 height=100 fill='url(#id2)' />
+        <ellipse cx=70 cy=460 rx=70 ry=35 fill='url(#id2)' />
+    </svg>
+
+    <!--캔버스 기준 그라데이션-->
+    <h3>캔버스 기준 그라데이션</h3>
+    <svg width=300 height=300>
+        <defs>
+            <!--1. (0,0)부터 (200,200)까지 그라데이션을 진행한다-->
+            <!--   따라서 폭과 너비가 200px인 정사각형이 된다.-->
+            <!--2. 캔버스 기준이므로 박스 안에 들어오는 도형은-->
+            <!--   캔버스 위치(좌표) 기준으로 그라데이션이 표현된다.-->
+            <linearGradient id='id2' x1='0' y1='0' x2=200 y2=200 gradientUnits='userSpaceOnUse'>
+                <stop offset="0%" stop-color=pink />
+                <stop offset="50%" stop-color=white />
+                <stop offset="100%" stop-color=pink />
+            </linearGradient>
+        </defs>
+        <!--캔버스(0,0,200,200)에서-->
+        <!--(0,0,200,100)영역에 해당하는 그라데이션을 반영한다-->
+        <rect x=0 y=0 width=200 height=100 fill='url(#id2)' />
+        <!--캔버스(0,0,200,200)에서-->
+        <!--(0,100,200,100)영역에 해당하는 그라데이션을 반영한다-->
+        <rect x=0 y=110 width=200 height=100 fill='url(#id2)' />
+    </svg>
+    
+    <h3>spreadMethod</h3>
+    <!--spreadMethod-->
+    <svg width=300 height=350>
+        <defs>
+            <!--x1=20 y1=0 x2=80 x2=0 으로 왼쪽에서 오른쪽으로 그라데이션 진행-->
+            <!--그라데이션 간격은 60px-->
+            <linearGradient id='id3' x1='20' y1='0' x2=80 y2=0 gradientUnits='userSpaceOnUse'>
+                <stop offset="0%" stop-color=red />
+                <stop offset="30%" stop-color=white />
+                <stop offset="100%" stop-color=lime />
+            </linearGradient>
+
+            <linearGradient id='pad' xlink:href='#id3' spreadMethod='pad' />
+            <linearGradient id='repeat' xlink:href='#id3' spreadMethod='repeat' />
+            <linearGradient id='reflect' xlink:href='#id3' spreadMethod='reflect' />
+        </defs>
+        
+        <!--pad : default로 한번 그라데이션 그린 후,-->
+        <!--남은 영역을 <stop offset='100%' stop-color='lime' />으로 채운다-->
+        <text x=10 y=70>pad, width=200 height=50</text>
+        <rect x=10 y=80 width=200 height=50 fill='url(#pad)' />
+        
+        <!--repeat-->
+        <text x=10 y=150>repeat, width=200 height=50</text>
+        <rect x=10 y=160 width=200 height=50 fill='url(#repeat)' />
+        
+        <!--reflect-->
+        <text x=10 y=230>repeat, width=200 height=50</text>
+        <rect x=10 y=240 width=200 height=50 fill='url(#reflect)' />
+    </svg>
+    
+    <h3>gradientTransform</h3>
+    <p>그라데이션 회전, 확대/축소</p>
+    <p>그라데이션만 다를 뿐 transform과 기능 같음</p>
+    <p>matrix, translate, rotate, scale, skewX, skewY</p>
+    
+    <!--gradientTransform-->
+    <svg width=300 height=500>
+        <defs>
+            <!--general-->
+            <linearGradient id='general'>
+                <stop offset="0%" stop-color=magenta />
+                <stop offset="50%" stop-color=white />
+                <stop offset="100%" stop-color=magenta />
+            </linearGradient>
+            
+            <!--rotate-->
+            <linearGradient id='rotate' gradientTransform='rotate(45)'>
+                <stop offset="0%" stop-color=cyan />
+                <stop offset="50%" stop-color=white />
+                <stop offset="100%" stop-color=cyan />
+            </linearGradient>
+        </defs>
+        
+        <text x=10 y=20>transform none</text>
+        <rect x=10 y=30 width=100 height=100 fill='url(#general)' />
+        
+        <text x=10 y=160>transform rotate 45deg</text>
+        <rect x=10 y=170 width=100 height=100 fill='url(#rotate)' />
+    </svg>
+    
+    <h1>radialGradient</h1>
+    <!--radialGradient-->
+    <svg width=300 height=300>
+        <defs>
+            <radialGradient id='radial'>
+                <stop offset="0%" stop-color=yellow />
+                <stop offset="50%" stop-color=white />
+                <stop offset="100%" stop-color=yellow />
+            </radialgradient>
+        </defs>
+        <circle cx=100 cy=150 r=60 fill='url(#radial)' />
+    </svg>
+
+
+    <h3>radialGradient - spreadMethod</h3>
+    <!--radialGradient - spreadMethod-->
+    <svg width=300 height=500>
+        <defs>
+            <radialGradient id='radial2' cx=0.3 xy=0.3 r='0.25'>
+                <stop offset="0%" stop-color=black />
+                <stop offset="50%" stop-color=white />
+                <stop offset="100%" stop-color=lime />
+            </radialgradient>
+            <radialgradient id='pad2' xlink:href='#radial2' spreadMethod='pad' />
+            <radialgradient id='repeat2' xlink:href='#radial2' spreadMethod='repeat' />
+            <radialgradient id='reflect2' xlink:href='#radial2' spreadMethod='reflect' />
+        </defs>
+        <text x=10 y=30>pad(default)</text>
+        <rect x=10 y=40 width=200 height=100 fill='url(#pad2)' />
+        <text x=10 y=170>repeat</text>
+        <rect x=10 y=180 width=200 height=100 fill='url(#repeat2)' />
+        <text x=10 y=310>reflect</text>
+        <rect x=10 y=320 width=200 height=100 fill='url(#reflect2)' />
+    </svg>
+
+    <h3>Gradient - 시작 위치</h3>
+    <!--radialGradient - spreadMethod-->
+    <svg width=300 height=300>
+        <defs>
+            <radialGradient id='idradial' cx=0.5 xy=0.5 r='0.5'>
+                <stop offset="0%" stop-color=violet />
+                <stop offset="50%" stop-color=white />
+                <stop offset="100%" stop-color=violet />
+            </radialgradient>
+            <radialgradient id='fxfy' fx='0.2' fy=0.2 xlink:href='#idradial' />
+        </defs>
+        <rect x=0 y=30 width=200 height=100 fill='url(#idradial)' />
+        <rect x=0 y=150 width=200 height=100 fill='url(#fxfy)' />
+        
+        <line x1=0 y1=10 x2=0 y2=270 stroke=red transform='translate(20)' />
+        <line x1=200 y1=10 x2=200 y2=270 stroke=red transform='translate(-20)' />
+    </svg>
+
     
     <hr>
 
