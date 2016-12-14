@@ -2,15 +2,16 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>d3_day2_02.html</title>
+    <title>___d3_day2_02.html___막대 그래프 그리기___</title>
     <script src="lib/d3.v3.5.16.js"></script>
     <script src="js/02.js"></script>
     <style>
+       body{
+         font-family: sans-serif;
+       }
         svg{
             display: block;
-            border: 1px solid #1d77ef;
-            width:670px;
-            height:450px;
+            border: 1px solid #000;
         }
         .bar{
             fill:#1d77ef;
@@ -21,10 +22,11 @@
             fill:none;
         }
         .axis{
-            stroke :#000;
-            stroke-width:1;
-            fill:none;
+          stroke :#000;
+          stroke-width:1;
         }
+        .axis path { fill:none; }
+        .axis text { stroke : none; }
     </style>
 </head>
 <body>
