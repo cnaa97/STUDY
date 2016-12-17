@@ -112,6 +112,25 @@ window.onload = function(){
     var xAxisList = [];
     // (4) 막대바 그리기
     function drawBar(object){
+
+        // 그라데이션
+        var stopColor = {begin:'#ccffff',end:'#1d77ef'};
+        var gradient = object.append('defs')
+            .append('linearGradient')
+            .attr('id', 'gradient')
+            .attr('x1', '0%')
+            .attr('y1', '0%')
+            .attr('x2', '100%')
+            .attr('y2', '100%');
+
+        gradient.append('stop')
+            .attr('offset', '0%')
+            .attr('stop-color', stopColor.begin);
+
+        gradient.append('stop')
+            .attr('offset', '100%')
+            .attr('stop-color', stopColor.end);
+
         object
             .append('g')
             .attr({
@@ -122,6 +141,16 @@ window.onload = function(){
             .data(base.data)
             .enter()
             .append('rect')
+            .on('mouseover',function(){
+                d3.select(this)
+                //.classed('mouseColor',true)
+                //.style('fill',''); // 그라데이션을 위해 추가한 코드
+            })
+            .on('mouseout',function(){
+                d3.select(this)
+                    //.classed('mouseColor',false);
+            })
+            .style('fill','url(#gradient)')
             .attr({
                 'x' : function(obj){
                     var coord = base.xScale(obj.mon);
@@ -140,6 +169,7 @@ window.onload = function(){
                     return base.graphHeight - base.yScale(obj.amt);
                 }
             });
+
     }
     drawBar(object);
 
