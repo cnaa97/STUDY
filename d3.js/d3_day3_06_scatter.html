@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>d3_day2_05_파이차트.html</title>
+    <script src="lib/d3.v3.5.16.js"></script>
+    <script src="js/06-scatter.js"></script>
+    <style>
+        body{
+          font-family: sans-serif;
+        }
+         svg{
+             display: block;
+             border: 1px solid #000;
+             margin-bottom: 10px;
+             width:600px;
+             height:340px;
+         }
+         .line{
+             fill:none;
+             stroke :#f00;
+             stroke-width:2;
+         }
+         .axis_line{
+             stroke :#000;
+             stroke-width:1;
+             fill:none;
+         }
+         .axis{
+           stroke :#000;
+           stroke-width:1;
+         }
+         .axis path { fill:none; }
+         .axis text { stroke : none; }
+         .datatext{
+             fill: #fff;
+             font-size : 12px;
+             text-anchor : end;
+             writing-mode : tb;
+         }
+         .mouseColor{
+             fill:lime;
+         }
+         .area{
+             fill:skyblue;
+             stroke:black;
+             stroke-width:1;
+         }
+         .pie{
+             fill:blue;
+             stroke:white;
+         }
+         .gridx, .gridy{
+             stroke:gray;
+             stroke-dasharray : 2,1;
+             stroke-opacity:0.3;
+         }
+         .gridy{
+             stroke-opacity:0.7;
+         }
+    </style>
+</head>
+<body>
+    <!--<svg id="idsvg" width=200 height=200 />-->
+</body>
+</html>
