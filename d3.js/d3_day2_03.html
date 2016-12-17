@@ -6,26 +6,36 @@
     <script src="lib/d3.v3.5.16.js"></script>
     <script src="js/03.js"></script>
     <style>
-        svg{
-            display: block;
-            border: 1px solid #1d77ef;
-            margin-bottom: 10px;
-            width:670px;
-            height:450px;
+        body{
+          font-family: sans-serif;
         }
-        .bar{
-            fill:#1d77ef;
-        }
-        .axis_line{
-            stroke :#000;
-            stroke-width:1;
-            fill:none;
-        }
-        .axis{
-            stroke :#000;
-            stroke-width:1;
-            fill:none;
-        }
+         svg{
+             display: block;
+             border: 1px solid #000;
+             margin-bottom: 10px;
+             width:670px;
+             height:450px;
+         }
+         .bar{
+             fill:#1d77ef;
+         }
+         .axis_line{
+             stroke :#000;
+             stroke-width:1;
+             fill:none;
+         }
+         .axis{
+           stroke :#000;
+           stroke-width:1;
+         }
+         .axis path { fill:none; }
+         .axis text { stroke : none; }
+         .datatext{
+             fill: #fff;
+             font-size : 12px;
+             text-anchor : end;
+             writing-mode : tb;
+         }
     </style>
 </head>
 <body>
