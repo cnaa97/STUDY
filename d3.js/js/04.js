@@ -53,7 +53,8 @@ window.onload = function(){
             .scale(base.xScale)
             .orient('bottom')
             ////////// 2개월 단위로 표시하기
-            //.ticks(6);
+            .ticks(6)
+            ////////// 포맷 바꿀 수 있음
             .tickFormat(function(mon){
                 return mon + '월';
             })
@@ -71,7 +72,10 @@ window.onload = function(){
             })
             .y((data, indx)=>{
                 return base.yScale(data.amt);
-            });
+            })
+            ///////////// 계단으로 바꿀 수 있음
+            .interpolate('step');
+            ///////////// Area 그래프 (아랫부분 채우기)
         object.append('g')
             .attr({
                 'class':'line',
@@ -81,6 +85,26 @@ window.onload = function(){
             .append('path')
             .attr('d',obj(base.data));
             // enter로 하지 않고 d속성에 데이터만 넣어줌
+    }
+
+    ////////////// Area 로 그래프 그리기
+    function drawArea(object){
+        var area = d3.svg.area()
+            .x((data,index)=>{
+                return base.xScale(data.mon);
+            })
+            .y0(base.graphHeight)
+            .y1((data, index)=>{
+                return base.yScale(data.amt);
+            });
+
+        object.append('g')
+            .attr({
+                'class':'area',
+                'transform':`translate(${base.trbl.left},${base.trbl.top})`
+            })
+            .append('path')
+            .attr('d',area(base.data));
     }
 
 
@@ -93,5 +117,6 @@ window.onload = function(){
     drawYAxis(object);
     drawXAxis(object);
     drawLine(object);
+    //drawArea(object);
 
 }
