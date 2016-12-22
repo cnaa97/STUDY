@@ -22,23 +22,30 @@ window.onload = function(){
         base.centerX = (base.svgWidth - 150) / 2;
         base.centerY = base.svgHeight / 2 + base.trbl.top;
 
-        /////////// d3에서 제공하는 색을 사용해서 각 파이 조각에 적용
-        //파이 조각에 반영할 색
+        ////// d3에서 제공하는 색을 사용해서 각 파이 조각에 적용
+        // 파이 조각에 반영할 색
         // base.color = ['blue','red','#aa88ff'] 형태로도 작성 가능
-        base.color = d3.scale.category10();
+        base.color = d3.scale.category10(); // 10가지 색 제공
+        // d3.scale.category20() 20가지 색 제공
+        // d3.scale.category20b() 다른 조합의 20가지 색 제공
+        // d3.scale.category20c() 또 다른 조합의 20가지 색 제공
     }
 
+    //// Pie 그리기
     function drawPie(object){
         // 레이아웃 인스턴스 생성
-        //var pie = d3.layout.pie();
-        /////////////// sort로 바꿀 수 있음
-        var pie = d3.layout.pie().sort(null);
+
+        ////// 일반 파이
+        var pie = d3.layout.pie();
+        ////// 정렬된 파이
+        var pie = d3.layout.pie().sort(d3.ascending);
+        var pie = d3.layout.pie().sort(d3.decending);
 
         // 내외측 반지름 지정
         var arc = d3.svg.arc()
             // 도너츠 형태일 때 값 지정
             // .innerRadius(0)
-            ///////// 도너츠이기 때문에 값을 바꾼다
+            ////// 도너츠이기 때문에 값을 바꾼다
             .innerRadius(60)
             .outerRadius(base.graphHeight / 2);
 
@@ -66,7 +73,7 @@ window.onload = function(){
             })
     }
 
-    //////////////// 가운데에 합계
+    ////// 도넛 가운데에 합계 텍스트 표시 (sum)
     function showTotal(object){
         object.append('g')
         .attr('transform',`translate(${base.centerX}, ${base.centerY})`)
@@ -75,7 +82,7 @@ window.onload = function(){
         .text(`합계 : ${d3.sum(base.data)}`);
     }
 
-    //////// 범례 표시
+    ////// 범례 표시
     function showLegend(object){
         base.legend = ['Laptop','iPhone','Mouse','Earphone','HDD','Macbook'];
         var xcoord = base.svgWidth - 130, ycoord = 100;

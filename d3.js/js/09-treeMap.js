@@ -8,17 +8,17 @@ window.onload = function(){
         		{name: 'state',
         			children: [
 		        		{name: 'newyork', value:150},
-		        		{name: 'texas', value:550},
+		        		{name: 'texas', value:350},
 		        		{name: 'miami', value:400},
 		        		{name: 'california', value:250}
 	        		]
 	        	},
 	        	{name:'europe',
 	        		children: [
-		        		{name: 'london', value:150},
-		        		{name: 'paris', value:550},
-		        		{name: 'milano', value:400},
-		        		{name: 'berlin', value:250}
+		        		{name: 'london', value:50},
+		        		{name: 'paris', value:150},
+		        		{name: 'milano', value:40},
+		        		{name: 'berlin', value:80}
 	        		]
 	        	}
         	]
@@ -36,7 +36,6 @@ window.onload = function(){
         base.svgHeight = parseInt(object.style('height'));
       	base.graphWidth = base.svgWidth - base.trbl.left - base.trbl.right;
         base.graphHeight = base.svgHeight - base.trbl.top - base.trbl.bottom;
-
     }
 
     function showColor(object){

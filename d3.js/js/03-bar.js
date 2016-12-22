@@ -115,6 +115,7 @@ window.onload = function(){
 
         // 그라데이션
         var stopColor = {begin:'#ccffff',end:'#1d77ef'};
+        // 그라데이션 defs를 정의하여 아래 fill 속성의 id 값을 지정해준다
         var gradient = object.append('defs')
             .append('linearGradient')
             .attr('id', 'gradient')
@@ -141,11 +142,15 @@ window.onload = function(){
             .data(base.data)
             .enter()
             .append('rect')
+            // 이벤트에 처리중인 {mon:1, amt:950} 데이터가 설정되므로
+            // 일반적인 이벤트를 처리할 수 없다
+            // 마우스오버가 발생하면 클래스를 추가한다
             .on('mouseover',function(){
                 d3.select(this)
                 //.classed('mouseColor',true)
                 //.style('fill',''); // 그라데이션을 위해 추가한 코드
             })
+            // 마우스 아웃 시 클래스 삭제
             .on('mouseout',function(){
                 d3.select(this)
                     //.classed('mouseColor',false);
@@ -173,8 +178,8 @@ window.onload = function(){
     }
     drawBar(object);
 
-    function drawText(object){
 
+    function drawText(object){
         object
             .append('g')
             .attr({
@@ -199,9 +204,6 @@ window.onload = function(){
 
 
 }// onload
-
-// coord = base.xScale(obj.mon)
-
 
 
 

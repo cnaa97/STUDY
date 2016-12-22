@@ -3,7 +3,9 @@ window.onload = function(){
     function defineData(){
         window.base = {};
         base.data = {
+            // root 작성 필수
         	name: "city",
+            // children에 서브 트리 작성
         	children: [
         		{name: 'state',
         			children: [

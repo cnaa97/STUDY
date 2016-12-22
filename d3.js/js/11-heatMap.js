@@ -1,33 +1,20 @@
 window.onload = function(){
 
+    //// 데이터
+    // 가로, 세로 10개씩 1에서 100까지 값
+    //// 히트맵
+    // 두 개 컬러 지정
+    // 데이터 값의 컬러 값을 구해 색 표시
+
     function defineData(){
         window.base = {};
         base.data = {
-        	name: "city",
-        	children: [
-        		{name: 'state',
-        			children: [
-		        		{name: 'newyork', value:150},
-		        		{name: 'texas', value:550},
-		        		{name: 'miami', value:400},
-		        		{name: 'california', value:250}
-	        		]
-	        	},
-	        	{name:'europe',
-	        		children: [
-		        		{name: 'london', value:150},
-		        		{name: 'paris', value:550},
-		        		{name: 'milano', value:400},
-		        		{name: 'berlin', value:250}
-	        		]
-	        	}
-        	]
+        	name: "city"
         }
     }
 
     function createSVG(){
-        return d3.select(document.body)
-                .append('svg')
+        return d3.select(document.body).append('svg')
     }
 
     function setBaseValue(object){
@@ -36,7 +23,6 @@ window.onload = function(){
         base.svgHeight = parseInt(object.style('height'));
       	base.graphWidth = base.svgWidth - base.trbl.left - base.trbl.right;
         base.graphHeight = base.svgHeight - base.trbl.top - base.trbl.bottom;
-
     }
 
     function showColor(object){
@@ -44,11 +30,16 @@ window.onload = function(){
         var maxValue = d3.max(base.data);
 
         base.data = [];
+
         // 0.1씩 증가하면서 보간 함수를 호출하여 컬러값을 구한다.
-        for(var k=0; k<1; k+=0.1){
+        /*for(var k=0; k<1; k+=0.1){
             base.data.push(rgbColor(k));
+        }*/
+        let k = 0;
+        while (k < 1){
+            base.data.push(rgbColor(k));
+            k += 0.1;
         }
-        console.log(base.data);
 
         var obj = object.append('g').selectAll('rect').data(base.data).enter();
 
@@ -64,12 +55,11 @@ window.onload = function(){
 			.attr('height', 30)
 			.style('fill', function(data){
                 var rgb = d3.rgb(data);
-                console.log(rgb);
 				return `rgb(${rgb.r},${rgb.g},${rgb.b})`;
 			});
 	}
 
-    ////////////////////////// 함수 실행
+    /****************************** 함수 실행 **********************************/
 
     defineData();
     var object = createSVG();

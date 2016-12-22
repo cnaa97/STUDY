@@ -1,4 +1,5 @@
 window.onload = function(){
+
     function defineData(){
         window.base = {};
         base.data = [1,3,5,7,9,
@@ -6,9 +7,9 @@ window.onload = function(){
                     21,22,23,24,25,26,27,28,29,30,
                     31,32,33,34,35,36,37,38,39,40,
                     31,32,33,34,35,
-                    41,42,43,44,45,46,47,48,49,50
-                ];
+                    41,42,43,44,45,46,47,48,49,50 ];
     };
+
     function createSVG(){
         return d3.select(document.body)
                 .append('svg')
@@ -36,6 +37,12 @@ window.onload = function(){
         var max = d3.max(histogram(base.data),function(data, index){
             return data.y;
         })
+
+        var min = d3.min(histogram(base.data),function(data,index){
+            return data.y;
+        })
+
+        // 도메인 범위를 이용해서 x,y축의 값을 읽어들인다
         base.yScale = d3.scale.linear()
             .domain([0,max])
             .range([base.graphHeight, 0]);
@@ -53,7 +60,7 @@ window.onload = function(){
                 return base.yScale(data.y) + base.trbl.top;
             },
             width:function(data, index){
-                // -2는 간격을 띄우기 이후새더ㅏ
+                // -2 는 간격을 띄우기 위해서
                 return base.xScale(data.dx) - 2;
             },
             height:function(data, index){
