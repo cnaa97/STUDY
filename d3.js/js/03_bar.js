@@ -60,6 +60,7 @@ window.onload = function(){
 
         // var yAxis = d3.svg.asix().scale(yScale).orient('left');
         // d3.svg.axis()로 축 제어 인스턴스 생성
+        // 축의 크기를 계산하기 위해 먼저 데이터와 범위를 받고 실제 화면크기에 맞게 계산할 준비를 한다
         // scale()의 파라미터에 앞에서 작성한 yScale
         base.yScale = d3.scale.linear()
             //[0, 1000]은 데이터 범위
@@ -113,7 +114,7 @@ window.onload = function(){
     // (4) 막대바 그리기
     function drawBar(object){
 
-        // 그라데이션
+        ////// 그라데이션 사용을 위해 defs로 미리 정의해둔다
         var stopColor = {begin:'#ccffff',end:'#1d77ef'};
         // 그라데이션 defs를 정의하여 아래 fill 속성의 id 값을 지정해준다
         var gradient = object.append('defs')

@@ -2,9 +2,9 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>d3_day2_03_bar.html</title>
+    <title>d3_day2_05_파이차트.html</title>
     <script src="lib/d3.v3.5.16.js"></script>
-    <script src="js/03-bar.js"></script>
+    <script src="js/06_scatter.js"></script>
     <style>
         body{
           font-family: sans-serif;
@@ -13,11 +13,13 @@
              display: block;
              border: 1px solid #000;
              margin-bottom: 10px;
-             width:670px;
-             height:450px;
+             width:600px;
+             height:340px;
          }
-         .bar{
-             fill:#1d77ef;
+         .line{
+             fill:none;
+             stroke :#f00;
+             stroke-width:2;
          }
          .axis_line{
              stroke :#000;
@@ -38,6 +40,23 @@
          }
          .mouseColor{
              fill:lime;
+         }
+         .area{
+             fill:skyblue;
+             stroke:black;
+             stroke-width:1;
+         }
+         .pie{
+             fill:blue;
+             stroke:white;
+         }
+         .gridx, .gridy{
+             stroke:gray;
+             stroke-dasharray : 2,1;
+             stroke-opacity:0.3;
+         }
+         .gridy{
+             stroke-opacity:0.7;
          }
     </style>
 </head>
