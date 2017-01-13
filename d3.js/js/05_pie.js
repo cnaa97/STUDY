@@ -39,15 +39,14 @@ window.onload = function(){
         var pie = d3.layout.pie();
         ////// 정렬된 파이
         var pie = d3.layout.pie().sort(d3.ascending);
-        var pie = d3.layout.pie().sort(d3.decending);
+        var pie = d3.layout.pie().sort(d3.descending);
 
         // 내외측 반지름 지정
         var arc = d3.svg.arc()
-            // 도너츠 형태일 때 값 지정
+            ////// 도너츠 형태일 때 값 지정
             // .innerRadius(0)
-            ////// 도너츠이기 때문에 값을 바꾼다
-            .innerRadius(60)
-            .outerRadius(base.graphHeight / 2);
+            .innerRadius(60) // 내측 반지름
+            .outerRadius(base.graphHeight / 2); // 외측 반지름
 
         var obj = object.selectAll('g')
             .data(pie(base.data))
@@ -57,7 +56,7 @@ window.onload = function(){
 
         obj.append('path')
             .attr('class','pie')
-            .attr('d',arc)
+            .attr('d', arc)
             ////// d3에서 제공하는 색상 적용
             .style('fill', function(data, index){
                 return base.color(index);
@@ -71,6 +70,7 @@ window.onload = function(){
             .text(function(data){
                 return data.value;
             })
+            .style('fill','#fff')
     }
 
     ////// 도넛 가운데에 합계 텍스트 표시 (sum)
@@ -78,14 +78,15 @@ window.onload = function(){
         object.append('g')
         .attr('transform',`translate(${base.centerX}, ${base.centerY})`)
         .append('text')
-        .attr({'font-size':20, 'y':10, 'text-anchor':'middle'})
+        .attr({'font-size':18, 'y':10, 'text-anchor':'middle'})
         .text(`합계 : ${d3.sum(base.data)}`);
     }
 
     ////// 범례 표시
     function showLegend(object){
         base.legend = ['Laptop','iPhone','Mouse','Earphone','HDD','Macbook'];
-        var xcoord = base.svgWidth - 130, ycoord = 100;
+        var xcoord = base.svgWidth - 150,
+            ycoord = 100;
 
         // object가 이전에 설정한 값을 갖고 있으므로 <g>를 다시 설정해서 구조를 만든다.
         var obj = object.append('g')
@@ -122,8 +123,7 @@ window.onload = function(){
             })
     }
 
-
-
+/*************************************************/
 
     var object = createSVG();
     defineData();

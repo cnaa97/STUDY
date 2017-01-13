@@ -117,7 +117,7 @@ window.onload = function(){
             //.interpolate('step');
             //// 부드러운 그래프로 바꾸기
             //.interpolate('basis');
-            .interpolate(methods[9]);
+            .interpolate('basis');
 
         object.append('g')
             .attr({
@@ -162,6 +162,6 @@ window.onload = function(){
     //// Line
     drawLine(object);
     //// Area
-    //drawArea(object);
+    drawArea(object);
 
 }

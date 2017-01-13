@@ -1,13 +1,16 @@
 window.onload = function(){
+
     function defineData(){
         window.base = {};
-        base.data = [[100,300],[130,100],[50,250],[80,30],[160,250],[10,300],[170,120],[253, 234]];
+        base.data = [[400,80],[130,100],[50,250],[80,30],[160,250],[450,200],[170,120],[253, 234]];
     };
+
     function createSVG(){
         return d3.select(document.body)
                 .append('svg')
                 .attr('id','idSvgGraph')
     }
+
     function setBaseValue(object){
         base.trbl = {top:20, bottom:20, right:50, left:50};
 
@@ -46,21 +49,26 @@ window.onload = function(){
 
     function drawScatter(object){
         base.color = d3.scale.category20();
-        var obj = object.append('g').selectAll('circle').data(base.data).enter();
-        obj.append('circle').attr({
-            cx : function(data){
-                return data[0] + base.trbl.left;
-            },
-            cy : function(data){
-                return base.graphHeight - data[1] + base.trbl.top;
-            },
-            r : 5
-        }).style('fill',function(data, index){
-            return base.color(index);
-        })
+        object.append('g')
+            .selectAll('circle')
+            .data(base.data)
+            .enter()
+            .append('circle')
+            .attr({
+                cx : function(data){
+                    return data[0] + base.trbl.left;
+                },
+                cy : function(data){
+                    // y좌표의 기준을 아래로부터 그리기 위해 base.graphHeight에서 데이터를 빼주고, 다시 top을 더한다.
+                    return base.graphHeight - data[1] + base.trbl.top;
+                },
+                r : 5
+            }).style('fill',function(data, index){
+                return base.color(index);
+            })
     }
 
-    /////// 그리그 그리기
+    /////// 그리드 그리기
     function drawGrid(object){
         var rangeX = d3.range(0, 500, 50);
         var rangeY = d3.range(0, 300, 50);
@@ -87,6 +95,8 @@ window.onload = function(){
             }
         });
     }
+
+/*************************************************/
 
     defineData();
     var object = createSVG();

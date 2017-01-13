@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>A-Frame 01</title>
+    <!-- Minified -->
+    <script src="https://aframe.io/releases/0.4.0/aframe.min.js"></script>
+    <!-- Uncompressed -->
+    <!--<script src="https://aframe.io/releases/0.4.0/aframe.js"></script>-->
+</head>
+<body>
+    <!--
+    3D 오브젝트의 단위인 entity(독립체)를 생성한다.
+    HTML 문서 내 엘리먼트로 쉽게 작성할 수 있다.
+    -->
+    <a-scene>
+        <!-- 박스 -->
+        <a-box color="red" position="0 2 -5" rotation="0 45 45" scale="2 2 2"></a-box>
+        <!-- entity (독립체) -->
+        <a-entity id="box" geometry="primitive: box" material="color: blue"></a-entity>
+    </a-scene>
+</body>
+</html>

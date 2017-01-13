@@ -93,7 +93,7 @@ window.onload = function(){
         base.xScale = d3.scale.ordinal()
             // 데이터에서 mon값을 범위로 지정한다
             .domain(base.data.map(function(obj){
-                return obj.mon;
+                return obj.mon; // [1,2,3,4,5,6,7,8,9,10,11,12]
             }))
             // 소수가 아닌 정수 반환
             .rangeRoundBands([0, base.graphWidth], .4);
@@ -148,15 +148,15 @@ window.onload = function(){
             // 마우스오버가 발생하면 클래스를 추가한다
             .on('mouseover',function(){
                 d3.select(this)
-                //.classed('mouseColor',true)
+                .classed('mouseColor',true)
                 //.style('fill',''); // 그라데이션을 위해 추가한 코드
             })
             // 마우스 아웃 시 클래스 삭제
             .on('mouseout',function(){
                 d3.select(this)
-                    //.classed('mouseColor',false);
+                    .classed('mouseColor',false);
             })
-            .style('fill','url(#gradient)')
+            //.style('fill','url(#gradient)')
             .attr({
                 'x' : function(obj){
                     var coord = base.xScale(obj.mon);

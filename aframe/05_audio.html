@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>A-Frame 04</title>
+    <!-- Minified -->
+    <script src="https://aframe.io/releases/0.4.0/aframe.min.js"></script>
+</head>
+<body>
+    <a-scene>
+        <a-assets>
+            <img id="boxTexture" src="https://i.imgur.com/mYmmbrp.jpg">
+        </a-assets>
+
+        <!--사운드 추가-->
+        <a-sound src="https://cdn.aframe.io/basis-guide/backgroundnoise.wav" autoplay="true" position="-3 1 -4"></a-sound>
+
+        <a-box src="#boxTexture" position="0 2 -5" rotation="0 45 45" scale="2 2 2"></a-box>
+    </a-scene>
+</body>
+</html>

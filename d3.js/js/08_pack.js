@@ -43,7 +43,8 @@ window.onload = function(){
 
     function showColor(object){
 		base.color = d3.scale.category20();
-		var pack = d3.layout.pack()
+
+        var pack = d3.layout.pack()
 						.size([base.graphWidth, base.graphHeight]);
 		var obj = object.append('g')
 						.selectAll('circle')
@@ -63,18 +64,22 @@ window.onload = function(){
 			.style('fill', function(data,idx){
 				return base.color(idx);
 			});
+
 		obj.enter()
 			.append('text')
 			.attr('transform',function(data,idx){
 				return 'translate(' + data.x + ', ' + data.y + ')';
 			})
 			.text(function(data,idx){
-				if((data.depth === 0)|| data.children){
+                if((data.depth === 0) || data.children){
 					return null;
 				}
-				return data.value;
+				return data.value +' '+ data.name;
 			})
-			.style('text-anchor','middle');
+			.style({
+                'text-anchor':'middle',
+                'font-size':'12px'
+            });
 	}
 
     ////////////////////////// 함수 실행

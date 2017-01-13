@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>A-Frame 06</title>
+    <!-- Minified -->
+    <script src="https://aframe.io/releases/0.4.0/aframe.min.js"></script>
+    <script src="https://rawgit.com/donmccurdy/aframe-extras/v2.1.1/dist/aframe-extras.loaders.min.js"></script>
+</head>
+<body>
+<a-scene>
+    <!--.obj, .mtl 포맷의 파일을 사용하여 웹에서 랜더링할 수 있다.-->
+    <a-assets>
+        <!-- 모델링 파일 -->
+        <!--<a-asset-item id="myModelObj" src="src/mal02.obj"></a-asset-item>-->
+        <a-asset-item id="myModelObj" src="src/crate.obj"></a-asset-item>
+        <!-- 매핑 파일 -->
+        <a-asset-item id="myModelMtl" src="src/crate.mtl"></a-asset-item>
+    </a-assets>
+    <a-entity obj-model="obj: #myModelObj; mtl: #myModelMtl" position="4 2 2"></a-entity>
+    <a-plane rotation="-90 0 0" width="40" height="40" color="red"></a-plane>
+</a-scene>
+</body>
+</html>

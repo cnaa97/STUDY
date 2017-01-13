@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>A-Frame 02</title>
+    <!-- Minified -->
+    <script src="https://aframe.io/releases/0.4.0/aframe.min.js"></script>
+</head>
+<body>
+    <a-scene>
+        <!--Ground-->
+        <!--<a-plane rotation="-90 0 0" width="40" height="40"></a-plane>-->
+
+        <!--텍스쳐로 이미지를 넣을 수 있-->
+        <a-assets>
+            <img id="groundTexture" src="https://cdn.aframe.io/a-painter/images/floor.jpg">
+        </a-assets>
+        <a-plane src="#groundTexture" rotation="-90 0 0" width="30" height="30" repeat="10 10"></a-plane>
+    </a-scene>
+</body>
+</html>

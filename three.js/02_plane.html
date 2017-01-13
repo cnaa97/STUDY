@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Three.js Basic</title>
+    <script src="lib/three.js"></script>
+</head>
+<body>
+<script>
+    // global variables
+    var scene = new THREE.Scene();
+    var camera = new THREE.PerspectiveCamera( 100, window.innerWidth / window.innerHeight, 0.1, 1000);
+    var renderer = new THREE.WebGLRenderer();
+
+    renderer.setClearColor(0x000000, 1.0);
+    renderer.setSize(window.innerWidth, window.innerHeight);
+    renderer.shadowMapEnabled = true;
+    document.body.appendChild(renderer.domElement);
+
+    var planeGeometry = new THREE.PlaneGeometry(5, 5);
+    var planeMaterial = new THREE.MeshLambertMaterial({ color: 0xcccccc });
+    var plane = new THREE.Mesh(planeGeometry, planeMaterial);
+    plane.receiveShadow = true;
+
+    // 필요함. 기본적으로 plane이 세로로 배치되어있기 때문에 돌려주어야 한다.
+    plane.rotation.x = -0.5 * Math.PI;
+    plane.position.y = -2;
+
+    scene.add(plane);
+
+    // 빛을 추가해주어야 평면을 볼 수 있다
+    var spotLight = new THREE.SpotLight(0xfff);
+    spotLight.position.set(10, 20, 20);
+    spotLight.castShadow = true;
+    scene.add(spotLight);
+
+    var render = function () {
+        renderer.render( scene, camera );
+    };
+
+    render();
+
+</script>
+</body>
+</html>
