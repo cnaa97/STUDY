@@ -10,25 +10,39 @@
 </head>
 <body>
 <script>
+    // 기본 scene 추가
     var scene = new THREE.Scene();
+
+    // 카메라에 담을 비율
     var aspect = window.innerWidth / window.innerHeight;
     var camera = new THREE.PerspectiveCamera( 75, aspect, 1, 1000 );
-    var renderer = new THREE.WebGLRenderer();
-
-    renderer.setSize( window.innerWidth, window.innerHeight );
-    document.body.appendChild( renderer.domElement );
-
-    var geometry = new THREE.BoxGeometry( 1, 1, 1 );
-    var material = new THREE.MeshNormalMaterial();
-    var cube = new THREE.Mesh( geometry, material );
-
-    scene.add( cube );
     camera.position.z = 5;
 
+    // 랜더링 객체
+    var renderer = new THREE.WebGLRenderer();
+    renderer.setSize( window.innerWidth, window.innerHeight );
+
+    // renderer.domElement 는 <canvas> 엘리먼트를 말함
+    document.body.appendChild( renderer.domElement );
+
+
+    // 도형
+    var geometry = new THREE.BoxGeometry( 1, 1, 1 );
+    // 재질
+    var material = new THREE.MeshNormalMaterial();
+    // 도형과 재질을 결합한 Mesh 객체를 생성한다
+    var cube = new THREE.Mesh( geometry, material );
+
+    // Scene에 Mesh를 추가한다
+    scene.add( cube );
+
     var render = function () {
+        // 애니메이션
         requestAnimationFrame( render );
         cube.rotation.x += 0.05;
         cube.rotation.y += 0.05;
+
+        // 실제 랜더링이 실행되는 코드
         renderer.render( scene, camera );
     };
 
