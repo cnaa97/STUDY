@@ -1,0 +1,648 @@
+/*********** Define Colors ***********/
+
+/* header title */
+$color-title:#d8dfe7;
+
+/* default - gray */
+$color-gray:#dce1e4;
+$color-gray-lighten:lighten( $color-gray, 10% );
+$color-gray-darken:darken( $color-gray, 10% );
+$color-gray-text:#787878;
+$color-gray-text-shadow:lighten( $color-gray, 20% );
+$color-gray-border:#A0A3A6;
+
+$colored-button-text-color:#fff;
+
+/* color - green */
+$color-green:#95A94C;
+$color-green-lighten:lighten( $color-green, 10% );
+$color-green-darken:darken( $color-green, 10% );
+$color-green-text-shadow:darken( $color-green, 20% );
+$color-green-border:darken( $color-green, 20% );
+
+/* color - yellow */
+$color-yellow:#DCBA02;
+$color-yellow-lighten:lighten( $color-yellow, 10% );
+$color-yellow-darken:darken( $color-yellow, 10% );
+$color-yellow-text-shadow:darken( $color-yellow, 20% );
+$color-yellow-border:darken( $color-yellow, 20% );
+
+/* color - blue */
+$color-blue:#3582CE;
+$color-blue-lighten:lighten( $color-blue, 10% );
+$color-blue-darken:darken( $color-blue, 10% );
+$color-blue-text-shadow:darken( $color-blue, 20% );
+$color-blue-border:darken( $color-blue, 20% );
+
+/* color - navy */
+$color-navy:#455C70;
+$color-navy-lighten:lighten( $color-navy, 10% );
+$color-navy-darken:darken( $color-navy, 10% );
+$color-navy-text-shadow:darken( $color-navy, 20% );
+$color-navy-border:darken( $color-navy, 20% );
+
+/* color - red */
+$color-red:#CA513C;
+$color-red-lighten:lighten( $color-red, 10% );
+$color-red-darken:darken( $color-red, 10% );
+$color-red-text-shadow:darken( $color-red, 20% );
+$color-red-border:darken( $color-red, 20% );
+
+/* color - pink */
+$color-pink:#F480AB;
+$color-pink-lighten:lighten( $color-pink, 10% );
+$color-pink-darken:darken( $color-pink, 10% );
+$color-pink-text-shadow:darken( $color-pink, 20% );
+$color-pink-border:darken( $color-pink, 20% );
+
+/* color - orange */
+$color-orange:#F1AB59;
+$color-orange-lighten:lighten( $color-orange, 10% );
+$color-orange-darken:darken( $color-orange, 10% );
+$color-orange-text-shadow:darken( $color-orange, 20% );
+$color-orange-border:darken( $color-orange, 20% );
+
+
+/*********** Button properties ***********/
+
+/* button height*/
+$btn-theme-sm:26px;
+$btn-theme-md:32px; /* default */
+$btn-theme-lg:50px;
+
+/* Button stroke */
+$btn-stroke-color:#DADEDE;
+$btn-stroke-lg:-6px;
+$btn-stroke-sm:-4px;
+$btn-stroke-radius:6px;
+
+
+/*********** Font-size ***********/
+
+$font-size-xl:24px;
+$font-size-lg:18px;
+$font-size-md:12px;
+
+/*********** Function ***********/
+
+/* vender prefix */
+@mixin prefix($property, $value, $prefixes: ()) {
+  @each $prefix in $prefixes {
+    #{'-' + $prefix + '-' + $property}: $value;
+  }
+ 
+  #{$property}: $value;
+}
+
+/***************************** Style Sheet ***************************/
+
+body{
+    font-family: Arial sans-serif;
+    background-color: #E5E9E9;
+    padding-bottom: 50px;
+}
+
+/*********** Header ***********/
+
+.header-bg{
+    background: $color-navy;
+    /*@include prefix(background, linear-gradient($color-navy-lighten, $color-navy-darken), webkit o moz);*/
+    border: 0;
+    border-radius: 0 !important;  
+    background-image: repeating-linear-gradient(45deg, rgba(0,0,0,0.1), rgba(0,0,0,0.1) 1px, transparent 1px, transparent 4px);
+    
+}
+
+/*********** Header font-style ***********/
+
+.style-title{
+    color: $color-title;
+    font-size: $font-size-xl;
+    font-weight: bold;
+}
+.style-com{
+    color: $color-title;
+    font-size: $font-size-md;
+}
+.style-and{
+    color: $color-title;
+    font-size: $font-size-md;
+    font-weight: bold;
+    font-style: italic;
+}
+.style-divisor{
+    color: #c2d0d6;
+    opacity: 0.5;
+}
+.style-last{
+    color:#b8c1cb;
+    font-style: italic;
+}
+
+.header-bg a span{
+    line-height: 34px;
+}
+
+.navbar-custom-brand{
+    height: 60px;
+}
+
+/* Bootstrap redifination */
+
+@media (min-width: 768px){
+    .nav-tabs.nav-justified>li>a,.nav-tabs.nav-justified>li>a:hover {
+        border-bottom: 1px solid rgba(0,0,0,0);
+        border-radius: 0;
+    }
+}
+.nav>li>a:focus, .nav>li>a:hover{
+    background-color: #2E3A44;
+    border: 1px solid rgba(0,0,0,0);
+}
+
+.nav-tabs-custom .nav-btn {
+    -webkit-box-shadow:inset 1px 1px 0 0 #53697D;
+    -moz-box-shadow:inset 1px 1px 0 0 #53697D;
+    box-shadow:inset 1px 1px 0 0 #53697D;
+    
+    background: $color-navy;
+    @include prefix(background, linear-gradient($color-navy-lighten, $color-navy-darken), webkit o moz);
+    border: 1px solid $color-navy-border;
+}
+
+.nav-tabs-custom > .nav-btn:hover {
+    background: $color-navy;
+    @include prefix(background, linear-gradient(#2E3A44, #2E3A44), webkit o moz);
+    border-bottom: 0;
+    border-radius: 0;
+}
+
+.nav-tabs-custom .nav-btn a{
+    font-size: $font-size-md;
+    color: $colored-button-text-color;
+    font-weight: bold;
+}
+
+.nav-btn:nth-child(1), .nav-btn:nth-child(1):hover{
+    border-radius: 4px 0 0 0;
+}
+.nav-btn:nth-last-child(1), .nav-btn:nth-last-child(1):hover{
+    border-radius: 0 4px 0 0;
+}
+
+.nav-bottom{
+    width: 100%;
+    margin-top: -20px;
+    height: 4px;
+    background-color: #2e3a45;
+    border-bottom: 1px solid #202d3a;
+}
+
+
+/*********** Searching ***********/
+
+
+.label-search {
+    color: #8d8d8d;
+    font-style: italic;
+    padding-right: 10px;
+}
+
+.form-search{
+    position: relative;
+    display: inline-block;
+    width: 265px;
+}
+.form-search > input{
+    border-radius: 4px !important;
+    -moz-box-shadow:    inset 0 1px 2px rgba(0,0,0,0.15);
+    -webkit-box-shadow: inset 0 1px 2px rgba(0,0,0,0.15);
+    box-shadow:         inset 0 1px 2px rgba(0,0,0,0.15);
+
+}
+
+.form-search > i {
+    position: absolute;
+    color: #a3a3a3;
+    font-size: $font-size-md;
+    line-height: 34px;
+    right: 0;
+    top: 0;
+    margin-right: 10px;
+    z-index: 10;
+}
+
+
+/*********** Button ***********/
+
+
+.btn-theme{
+    position:relative;
+    
+    background: $color-gray;
+    @include prefix(background, linear-gradient($color-gray-lighten, $color-gray-darken), webkit o moz);
+    border: 1px solid $color-gray-border;
+    
+    font-weight: bolder;
+    color: $color-gray-text;
+    font-size: $font-size-md;
+    
+    height: $btn-theme-md;
+    text-shadow: 0 1px 0 $color-gray-text-shadow;
+}
+.btn-theme:hover{
+    text-shadow: 0 -1px 0 transparent;
+}
+
+
+.btn-theme::after{
+    content: '';
+    position: absolute;
+    z-index: -1;
+    
+    top: $btn-stroke-lg;
+    left: $btn-stroke-lg;
+    right: $btn-stroke-lg;
+    bottom: $btn-stroke-lg;
+    background: $btn-stroke-color;
+    border-radius: $btn-stroke-radius; 
+}
+
+.btn-theme-sm ~ .btn-theme::after{
+    top: $btn-stroke-sm;
+    left: $btn-stroke-sm;
+    right: $btn-stroke-sm;
+    bottom: $btn-stroke-sm;
+    line-height: 10px;
+}
+
+.btn-append{
+    position: relative;
+    width: 26px;
+    padding-left: 0;
+    padding-left: 5px;
+    margin-left: -14px;
+}
+/*
+.btn-append:after{
+    position: absolute;
+	content: " ";
+	height: 0;
+	width: 0;
+	right: 100%;
+	top: 50%;
+	border: solid transparent;
+	border-color: transparent transparent transparent red;
+    border-right-color: red;
+	border-width: 10px;
+	margin-top: -10px;
+}*/
+.btn-page{
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    padding: 0 0;  
+    border: 1px solid #ACAFAF;
+    font-size: $font-size-md;
+    line-height: 17px;
+    
+    margin-right: 4px;
+    margin-left: 4px;
+}
+.btn-page-num{
+    background-color: #E5E9E9;
+    color: #969696;
+    line-height: 19px;
+    margin-right: 1px;
+    margin-left: 0;
+}
+.btn-page-num-gray{
+    color: #fff;
+    background-color: #ACAFAF;
+}
+.btn-page-num-white{
+    background-color: #fff;
+    color: #777777;
+}
+
+
+/*********** By Button Size ***********/
+
+.btn-theme-sm{
+    height: $btn-theme-sm;
+    font-weight: normal;
+}
+.btn-theme-lg{
+    height: $btn-theme-lg;
+}
+
+/*********** Color ***********/
+
+.theme-green{    
+    background: $color-green;
+    @include prefix(background, linear-gradient($color-green-lighten, $color-green-darken), webkit o moz);
+    border: 1px solid $color-green-border;
+    color: $colored-button-text-color;
+    text-shadow: 0 -1px 0 $color-green-text-shadow;
+}
+.theme-green:hover{
+    border: 1px solid $color-green-border;
+    color: darken( $color-green, 40%);
+}
+.theme-yellow{    
+    background: $color-yellow;
+    @include prefix(background, linear-gradient($color-yellow-lighten, $color-yellow-darken), webkit o moz);
+    border: 1px solid $color-yellow-border;
+    color: $colored-button-text-color;
+    text-shadow: 0 -1px 0 $color-yellow-text-shadow;
+}
+.theme-yellow:hover{
+    border: 1px solid $color-yellow-border;
+    color: darken( $color-yellow, 30%);
+}
+.theme-blue{    
+    background: $color-blue;
+    @include prefix(background, linear-gradient($color-blue-lighten, $color-blue-darken), webkit o moz);
+    border: 1px solid $color-blue-border;
+    color: $colored-button-text-color;
+    text-shadow: 0 -1px 0 $color-blue-text-shadow;
+}
+.theme-blue:hover{
+    border: 1px solid $color-blue-border;
+    color: darken( $color-blue, 40%);
+}
+.theme-navy{    
+    background: $color-navy;
+    @include prefix(background, linear-gradient($color-navy-lighten, $color-navy-darken), webkit o moz);
+    border: 1px solid $color-navy-border;
+    color: $colored-button-text-color;
+    text-shadow: 0 -1px 0 $color-navy-text-shadow;
+}
+.theme-navy:hover{
+    border: 1px solid $color-navy-border;
+    color: darken( $color-navy, 40%);
+}
+.theme-red{    
+    background: $color-red;
+    @include prefix(background, linear-gradient($color-red-lighten, $color-red-darken), webkit o moz);
+    border: 1px solid $color-red-border;
+    color: $colored-button-text-color;
+    text-shadow: 0 -1px 0 $color-red-text-shadow;
+}
+.theme-red:hover{
+    border: 1px solid $color-red-border;
+    color: darken( $color-red, 30%);
+}
+.theme-orange{    
+    background: $color-orange;
+    @include prefix(background, linear-gradient($color-orange-lighten, $color-orange-darken), webkit o moz);
+    border: 1px solid $color-orange-border;
+    color: $colored-button-text-color;
+    text-shadow: 0 -1px 0 $color-orange-text-shadow;
+}
+.theme-orange:hover{
+    border: 1px solid $color-orange-border;
+    color: darken( $color-orange, 50%);
+}
+.theme-pink{    
+    background: $color-pink;
+    @include prefix(background, linear-gradient($color-pink-lighten, $color-pink-darken), webkit o moz);
+    border: 1px solid $color-pink-border;
+    color: $colored-button-text-color;
+    text-shadow: 0 -1px 0 $color-pink-text-shadow;
+}
+.theme-pink:hover{
+    border: 1px solid $color-pink-border;
+    color: darken( $color-pink, 50%);
+}
+
+/*********** Button icon ***********/
+
+.btn-theme-i{
+    /*color: $color-gray-text;*/
+    font-size: $font-size-md;
+    line-height: 14px;
+    margin-right: 6px;
+    line-height: 10px;
+}
+
+.icon-btn-addon{
+    /*!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
+}
+
+
+/*********** Banner ***********/
+
+.banner{
+    position: relative;
+    width: 134px;
+}
+.banner > i {
+    position: absolute;
+    left: 0;
+    top: 0;
+    margin-left: 12px;
+}
+.banner > .fa-mobile{
+    margin-top: 18px;
+    font-size: 40px;    
+}
+.banner > .fa-tag {
+    font-size: 28px;
+    margin-top: 18px;
+}
+.banner > .fa-download{
+    font-size: 28px;
+    margin-top: 20px;
+}
+
+.banner > span{
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-top: 8px;
+    margin-left: 42px;
+    line-height: 16px;
+    font-weight: normal;
+    text-align: left;
+    vertical-align: middle;
+}
+
+.banner > span > strong{
+    font-size: $font-size-lg;
+}
+
+/***************************** Tabs menu ***************************/
+
+.tab-menu{
+    width: 84.5%;
+    margin-bottom: 0px;
+}
+.tab-menu li{
+}
+.tab-menu li a{
+    width: 70px;
+    font-size: $font-size-md;
+    text-align: center;
+    color: #787878;
+    border-left: 1px solid #CDCDCD;
+    border-top: 1px solid #CDCDCD;
+    border-right: 1px solid #CDCDCD;
+}
+.nav-tabs>li.active>a, .nav-tabs>li.active>a:focus, .nav-tabs>li.active>a:hover{
+    background-color: #F4F4F4;
+}
+
+.tab-contents{
+    position: relative;   
+}
+
+.tab-contents-left{
+    width: 85%;
+    background-color: #F4F4F4;
+    border-radius: 0px 4px 4px 4px; 
+    height: 120px;
+    border: 1px solid #D6D6D6;
+    border-top: 0;
+    box-shadow: 2px 2px 2px rgba(0,0,0,0.1);
+}
+.tab-contents-img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 4px;
+    border: 4px solid #DCDDDD;
+    margin-top: 20px;
+    margin-left: 20px;
+}
+.tab-contents-left > h3{
+    display: inline-block;
+    color: #62727c;
+    font-size: $font-size-lg;
+    margin-left: 120px;
+    margin-top: 22px;
+}
+.tab-contents-left > p{
+    display: inline-block;
+    font-size: $font-size-md;
+    color: #595959;
+    margin-left: 120px;
+}
+
+.tab-contents-right {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 120px;
+    width: 100%;
+    text-align: right;
+    z-index: -1;
+    margin-top: 4px;
+    background-color: #EDEFF0;
+    border: 1px solid #D6D6D6;
+    border-radius: 4px;
+}
+.tab-contents-right > i {
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 20px;
+    margin-top: 24px;
+    margin-right: 16px;
+}
+.tab-contents-right span {
+    display: inline-block;
+    font-size: 18px;
+    margin-right: 42px;
+}
+.month {
+    font-weight: 900;
+    margin-top: 36px;
+}
+
+/*********** Image Slider ***********/
+.demo{
+    position: relative;
+    height: 70px;
+}
+.demo::after {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    
+    top: $btn-stroke-lg;
+    left: $btn-stroke-lg;
+    right: $btn-stroke-lg;
+    bottom: $btn-stroke-lg;
+    background: $btn-stroke-color;
+    border-radius: $btn-stroke-radius; 
+}
+.item{
+    position: relative;
+}
+.slider-arrow > a {
+    color:#797979;
+    font-size: 20px;
+    margin-top: 22px;
+    margin-left: 6px;
+    text-decoration: none;
+}
+.slider-arrow{
+    display: none;
+    box-sizing: border-box;
+    width: 22px;
+    height: 70px;
+    border: 1px solid #A0A4A6;   
+}
+
+.arrow-left{
+    position: absolute; 
+    z-index: 9999;
+    left: 0;
+    top: 0;
+    border-radius: 4px 0 0 4px;
+}
+.arrow-right{
+    position: absolute;
+    z-index: 9999;
+    right: 0;
+    top: 0;
+    border-radius: 0 4px 4px 0;
+}
+
+.demo > .item > ul > li {
+    list-style: none;
+    text-align: center;
+}
+.demo > .item > ul > li > img{
+    display: inline-block;
+    width: 70px;
+    height: 70px;
+    border-radius: 4px;
+    border: 1px solid rgba(0,0,0,0.5);
+}
+
+
+
+
+
+/*********** Text / Font ***********/
+
+.text-shadow-black{
+    text-shadow: 0px 2px 2px rgba(0,0,0,0.8);
+}
+
+.text-shadow-white{
+    text-shadow: 0px 1px 0px rgba(255, 255, 255, 1);
+}
+
+.nav-justified .nav-btn, .nav-justified .nav-btn:hover {border-right-width:0px}
+.nav-justified .nav-btn:last-of-type {border-right-width:1px}
+
+
+/*********** Margin ***********/
+
+.top{margin-top: 14px;}
+.top2{margin-top: 22px;}
+.top3{margin-top: 26px;}
+.btn-default{margin-right: 18px;}
