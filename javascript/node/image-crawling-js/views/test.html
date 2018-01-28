@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"> </script>
+</head>
+<body>
+  <script>
+  $(function() {
+
+$('#printImg').click(function(){
+  /*$.get('/results.json',function(result){
+    for (var a = 0; a < data.length; a++){
+        var tempImgUrl = data[a].img;
+        $('<img>').attr('src',tempImgUrl).appendTo('.imgGroup');
+      }
+  }, 'json');*/
+
+  $.ajax({
+    type:'GET',
+    jsonp:'jsonp',
+    url: '/results.json',
+    success: function(data){
+      for (var a = 0; a < data.length; a++){
+        var tempImgUrl = data[a].img;
+        $('<img>').attr('src',tempImgUrl).appendTo('.imgGroup');
+      }
+    }
+  });
+  return false;
+});
+
+
+/*
+    $.getJSON('results.json', function(data) {
+      console.log(data);
+    });
+*/
+    /*var data2 = JSON.parse(data);
+    for (var a = 0; a < data2.length; a++){
+      var tempImgUrl = data2[a].img;
+      console.log(tempImgUrl);
+      $('<img>').attr('src',tempImgUrl).appendTo('body');
+    }*/
+
+    /*$.getJSON('results.json', function(data) {
+
+    for (var a = 0; a < data.length; a++){
+      var tempImgUrl = data[a].img;
+      console.log(tempImgUrl);
+      $('<img>').attr('src',tempImgUrl).appendTo('body');
+    }
+
+ });*/
+
+});
+  </script>
+  <a href="/getImg">이미지 가져오기</a>
+  <a id="printImg" href="#">이미지 출력하기</a>
+  <div class="imgGroup"></div>
+</body>
+</html>

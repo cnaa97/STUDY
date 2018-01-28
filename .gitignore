@@ -1,6 +1,6 @@
 *.log
 *.vscode
-/node/node_modules
+node_modules
 .idea/STUDY.iml
 
 ### Android
