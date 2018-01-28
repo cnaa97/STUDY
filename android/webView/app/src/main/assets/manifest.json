@@ -1,0 +1,35 @@
+{
+  "name": "Web Application Manifest",
+  "icons": [
+    {
+      "src": "framer/images/icon-76.png",
+      "sizes": "76x76",
+      "type": "image/png"
+    },
+    {
+      "src": "framer/images/icon-120.png",
+      "sizes": "120x120",
+      "type": "image/png"
+    },
+    {
+      "src": "framer/images/icon-152.png",
+      "sizes": "72x72",
+      "type": "image/png"
+    },
+    {
+      "src": "framer/images/icon-180.png",
+      "sizes": "96x96",
+      "type": "image/png"
+    },
+    {
+      "src": "framer/images/icon-192.png",
+      "sizes": "144x144",
+      "type": "image/png"
+    }
+  ],
+  "theme_color": "#9E9E9E",
+  "background_color": "#9E9E9E",
+  "start_url": "index.html",
+  "display": "standalone",
+  "orientation": "portrait"
+}

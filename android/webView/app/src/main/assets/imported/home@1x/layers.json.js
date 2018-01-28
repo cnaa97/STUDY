@@ -1,0 +1,1051 @@
+window.__imported__ = window.__imported__ || {};
+window.__imported__["home@1x/layers.json.js"] = [
+	{
+		"id": 1217,
+		"name": "home2",
+		"layerFrame": {
+			"x": 0,
+			"y": 0,
+			"width": 1440,
+			"height": 2684
+		},
+		"maskFrame": null,
+		"image": null,
+		"imageType": null,
+		"children": [
+			{
+				"id": 1243,
+				"name": "homesc",
+				"layerFrame": {
+					"x": 0,
+					"y": 0,
+					"width": 1440,
+					"height": 2880
+				},
+				"maskFrame": null,
+				"image": null,
+				"imageType": null,
+				"children": [
+					{
+						"id": 1216,
+						"name": "indicator",
+						"layerFrame": {
+							"x": 0,
+							"y": 0,
+							"width": 1440,
+							"height": 2880
+						},
+						"maskFrame": null,
+						"image": null,
+						"imageType": null,
+						"children": [
+							{
+								"id": 1215,
+								"name": "top_indi",
+								"layerFrame": {
+									"x": 0,
+									"y": 0,
+									"width": 1440,
+									"height": 2880
+								},
+								"maskFrame": null,
+								"image": {
+									"path": "images/top_indi.png",
+									"frame": {
+										"x": 940,
+										"y": 19,
+										"width": 436,
+										"height": 57
+									}
+								},
+								"imageType": "png",
+								"children": [
+									
+								],
+								"modification": "809564510"
+							},
+							{
+								"id": 1212,
+								"name": "time",
+								"layerFrame": {
+									"x": 0,
+									"y": 0,
+									"width": 1440,
+									"height": 2880
+								},
+								"maskFrame": null,
+								"image": {
+									"path": "images/time.png",
+									"frame": {
+										"x": 440,
+										"y": 340,
+										"width": 560,
+										"height": 329
+									}
+								},
+								"imageType": "png",
+								"children": [
+									
+								],
+								"modification": "568348217"
+							},
+							{
+								"id": 1209,
+								"name": "fingerprint",
+								"layerFrame": {
+									"x": 0,
+									"y": 0,
+									"width": 1440,
+									"height": 2880
+								},
+								"maskFrame": null,
+								"image": {
+									"path": "images/fingerprint.png",
+									"frame": {
+										"x": 632,
+										"y": 2332,
+										"width": 176,
+										"height": 194
+									}
+								},
+								"imageType": "png",
+								"children": [
+									
+								],
+								"modification": "2135091897"
+							}
+						],
+						"modification": "1979711359"
+					},
+					{
+						"id": 1218,
+						"name": "circles",
+						"layerFrame": {
+							"x": 0,
+							"y": 0,
+							"width": 1440,
+							"height": 2880
+						},
+						"maskFrame": null,
+						"image": null,
+						"imageType": null,
+						"children": [
+							{
+								"id": 1204,
+								"name": "big_circle",
+								"layerFrame": {
+									"x": 0,
+									"y": 0,
+									"width": 1440,
+									"height": 2880
+								},
+								"maskFrame": null,
+								"image": null,
+								"imageType": null,
+								"children": [
+									{
+										"id": 1203,
+										"name": "big0",
+										"layerFrame": {
+											"x": 0,
+											"y": 0,
+											"width": 1440,
+											"height": 2880
+										},
+										"maskFrame": null,
+										"image": null,
+										"imageType": null,
+										"children": [
+											{
+												"id": 1287,
+												"name": "b_content0",
+												"layerFrame": {
+													"x": 0,
+													"y": 0,
+													"width": 1440,
+													"height": 2880
+												},
+												"maskFrame": null,
+												"image": null,
+												"imageType": null,
+												"children": [
+													{
+														"id": 1245,
+														"name": "cal_content",
+														"layerFrame": {
+															"x": 0,
+															"y": 0,
+															"width": 1440,
+															"height": 2880
+														},
+														"maskFrame": null,
+														"image": {
+															"path": "images/cal_content.png",
+															"frame": {
+																"x": 535,
+																"y": 1335,
+																"width": 363,
+																"height": 345
+															}
+														},
+														"imageType": "png",
+														"children": [
+															
+														],
+														"modification": "60209453"
+													},
+													{
+														"id": 1251,
+														"name": "cal_circle",
+														"layerFrame": {
+															"x": 0,
+															"y": 0,
+															"width": 1440,
+															"height": 2880
+														},
+														"maskFrame": null,
+														"image": {
+															"path": "images/cal_circle.png",
+															"frame": {
+																"x": 469,
+																"y": 1276,
+																"width": 503,
+																"height": 503
+															}
+														},
+														"imageType": "png",
+														"children": [
+															
+														],
+														"modification": "60209425"
+													}
+												],
+												"modification": "178024831"
+											}
+										],
+										"modification": "2007482446"
+									},
+									{
+										"id": 1176,
+										"name": "big1",
+										"layerFrame": {
+											"x": 0,
+											"y": 0,
+											"width": 1440,
+											"height": 2880
+										},
+										"maskFrame": null,
+										"image": null,
+										"imageType": null,
+										"children": [
+											{
+												"id": 1289,
+												"name": "b_content1",
+												"layerFrame": {
+													"x": 0,
+													"y": 0,
+													"width": 1440,
+													"height": 2880
+												},
+												"maskFrame": null,
+												"image": {
+													"path": "images/b_content1.png",
+													"frame": {
+														"x": 469,
+														"y": 1276,
+														"width": 503,
+														"height": 503
+													}
+												},
+												"imageType": "png",
+												"children": [
+													
+												],
+												"modification": "581398496"
+											}
+										],
+										"modification": "786064173"
+									},
+									{
+										"id": 1193,
+										"name": "big2",
+										"layerFrame": {
+											"x": 0,
+											"y": 0,
+											"width": 1440,
+											"height": 2880
+										},
+										"maskFrame": null,
+										"image": null,
+										"imageType": null,
+										"children": [
+											{
+												"id": 1291,
+												"name": "b_content2",
+												"layerFrame": {
+													"x": 0,
+													"y": 0,
+													"width": 1440,
+													"height": 2880
+												},
+												"maskFrame": null,
+												"image": {
+													"path": "images/b_content2.png",
+													"frame": {
+														"x": 469,
+														"y": 1276,
+														"width": 503,
+														"height": 503
+													}
+												},
+												"imageType": "png",
+												"children": [
+													{
+														"id": 1247,
+														"name": "air_content",
+														"layerFrame": {
+															"x": 0,
+															"y": 0,
+															"width": 1440,
+															"height": 2880
+														},
+														"maskFrame": null,
+														"image": {
+															"path": "images/air_content.png",
+															"frame": {
+																"x": 565,
+																"y": 1368,
+																"width": 322,
+																"height": 297
+															}
+														},
+														"imageType": "png",
+														"children": [
+															
+														],
+														"modification": "60209358"
+													},
+													{
+														"id": 1249,
+														"name": "air_circle",
+														"layerFrame": {
+															"x": 0,
+															"y": 0,
+															"width": 1440,
+															"height": 2880
+														},
+														"maskFrame": null,
+														"image": {
+															"path": "images/air_circle.png",
+															"frame": {
+																"x": 469,
+																"y": 1276,
+																"width": 503,
+																"height": 503
+															}
+														},
+														"imageType": "png",
+														"children": [
+															
+														],
+														"modification": "1222233441"
+													}
+												],
+												"modification": "1704180298"
+											}
+										],
+										"modification": "1294787812"
+									},
+									{
+										"id": 1129,
+										"name": "big3",
+										"layerFrame": {
+											"x": 0,
+											"y": 0,
+											"width": 1440,
+											"height": 2880
+										},
+										"maskFrame": null,
+										"image": null,
+										"imageType": null,
+										"children": [
+											{
+												"id": 1275,
+												"name": "b_content3",
+												"layerFrame": {
+													"x": 0,
+													"y": 0,
+													"width": 1440,
+													"height": 2880
+												},
+												"maskFrame": null,
+												"image": {
+													"path": "images/b_content3.png",
+													"frame": {
+														"x": 469,
+														"y": 1276,
+														"width": 503,
+														"height": 503
+													}
+												},
+												"imageType": "png",
+												"children": [
+													
+												],
+												"modification": "1313627413"
+											}
+										],
+										"modification": "1734489956"
+									},
+									{
+										"id": 1344,
+										"name": "big4",
+										"layerFrame": {
+											"x": 0,
+											"y": 0,
+											"width": 1440,
+											"height": 2880
+										},
+										"maskFrame": null,
+										"image": null,
+										"imageType": null,
+										"children": [
+											{
+												"id": 1343,
+												"name": "b_content4",
+												"layerFrame": {
+													"x": 0,
+													"y": 0,
+													"width": 1440,
+													"height": 2880
+												},
+												"maskFrame": null,
+												"image": {
+													"path": "images/b_content4.png",
+													"frame": {
+														"x": 438,
+														"y": 1245,
+														"width": 564,
+														"height": 564
+													}
+												},
+												"imageType": "png",
+												"children": [
+													
+												],
+												"modification": "2013495040"
+											}
+										],
+										"modification": "1965080921"
+									},
+									{
+										"id": 1307,
+										"name": "big5",
+										"layerFrame": {
+											"x": 0,
+											"y": 0,
+											"width": 1440,
+											"height": 2880
+										},
+										"maskFrame": null,
+										"image": null,
+										"imageType": null,
+										"children": [
+											{
+												"id": 1306,
+												"name": "b_content5",
+												"layerFrame": {
+													"x": 0,
+													"y": 0,
+													"width": 1440,
+													"height": 2880
+												},
+												"maskFrame": null,
+												"image": {
+													"path": "images/b_content5.png",
+													"frame": {
+														"x": 469,
+														"y": 1276,
+														"width": 503,
+														"height": 503
+													}
+												},
+												"imageType": "png",
+												"children": [
+													
+												],
+												"modification": "915555434"
+											}
+										],
+										"modification": "2057461921"
+									},
+									{
+										"id": 1184,
+										"name": "big6",
+										"layerFrame": {
+											"x": 0,
+											"y": 0,
+											"width": 1440,
+											"height": 2880
+										},
+										"maskFrame": null,
+										"image": null,
+										"imageType": null,
+										"children": [
+											{
+												"id": 1293,
+												"name": "b_content6",
+												"layerFrame": {
+													"x": 0,
+													"y": 0,
+													"width": 1440,
+													"height": 2880
+												},
+												"maskFrame": null,
+												"image": {
+													"path": "images/b_content6.png",
+													"frame": {
+														"x": 469,
+														"y": 1276,
+														"width": 503,
+														"height": 503
+													}
+												},
+												"imageType": "png",
+												"children": [
+													
+												],
+												"modification": "60209175"
+											}
+										],
+										"modification": "324279856"
+									},
+									{
+										"id": 1319,
+										"name": "big7",
+										"layerFrame": {
+											"x": 0,
+											"y": 0,
+											"width": 1440,
+											"height": 2880
+										},
+										"maskFrame": null,
+										"image": null,
+										"imageType": null,
+										"children": [
+											{
+												"id": 1318,
+												"name": "b_content7",
+												"layerFrame": {
+													"x": 0,
+													"y": 0,
+													"width": 1440,
+													"height": 2880
+												},
+												"maskFrame": null,
+												"image": {
+													"path": "images/b_content7.png",
+													"frame": {
+														"x": 472,
+														"y": 1276,
+														"width": 503,
+														"height": 503
+													}
+												},
+												"imageType": "png",
+												"children": [
+													
+												],
+												"modification": "1702667682"
+											}
+										],
+										"modification": "1747788171"
+									},
+									{
+										"id": 1325,
+										"name": "big8",
+										"layerFrame": {
+											"x": 0,
+											"y": 0,
+											"width": 1440,
+											"height": 2880
+										},
+										"maskFrame": null,
+										"image": null,
+										"imageType": null,
+										"children": [
+											{
+												"id": 1324,
+												"name": "b_content8",
+												"layerFrame": {
+													"x": 0,
+													"y": 0,
+													"width": 1440,
+													"height": 2880
+												},
+												"maskFrame": null,
+												"image": {
+													"path": "images/b_content8.png",
+													"frame": {
+														"x": 468,
+														"y": 1276,
+														"width": 503,
+														"height": 503
+													}
+												},
+												"imageType": "png",
+												"children": [
+													
+												],
+												"modification": "1995816978"
+											}
+										],
+										"modification": "265007930"
+									}
+								],
+								"modification": "1883016248"
+							},
+							{
+								"id": 1171,
+								"name": "small_circle",
+								"layerFrame": {
+									"x": 0,
+									"y": 0,
+									"width": 1440,
+									"height": 2880
+								},
+								"maskFrame": null,
+								"image": null,
+								"imageType": null,
+								"children": [
+									{
+										"id": 1154,
+										"name": "layer0",
+										"layerFrame": {
+											"x": 0,
+											"y": 0,
+											"width": 1440,
+											"height": 2880
+										},
+										"maskFrame": null,
+										"image": null,
+										"imageType": null,
+										"children": [
+											{
+												"id": 1269,
+												"name": "content0",
+												"layerFrame": {
+													"x": 0,
+													"y": 0,
+													"width": 1440,
+													"height": 2880
+												},
+												"maskFrame": null,
+												"image": {
+													"path": "images/content0.png",
+													"frame": {
+														"x": 597,
+														"y": 878,
+														"width": 251,
+														"height": 251
+													}
+												},
+												"imageType": "png",
+												"children": [
+													
+												],
+												"modification": "60179598"
+											}
+										],
+										"modification": "1716426466"
+									},
+									{
+										"id": 1170,
+										"name": "layer1",
+										"layerFrame": {
+											"x": 0,
+											"y": 0,
+											"width": 1440,
+											"height": 2880
+										},
+										"maskFrame": null,
+										"image": null,
+										"imageType": null,
+										"children": [
+											{
+												"id": 1271,
+												"name": "content1",
+												"layerFrame": {
+													"x": 0,
+													"y": 0,
+													"width": 1440,
+													"height": 2880
+												},
+												"maskFrame": null,
+												"image": {
+													"path": "images/content1.png",
+													"frame": {
+														"x": 596,
+														"y": 878,
+														"width": 252,
+														"height": 251
+													}
+												},
+												"imageType": "png",
+												"children": [
+													
+												],
+												"modification": "60179570"
+											}
+										],
+										"modification": "954392346"
+									},
+									{
+										"id": 1160,
+										"name": "layer2",
+										"layerFrame": {
+											"x": 0,
+											"y": 0,
+											"width": 1440,
+											"height": 2880
+										},
+										"maskFrame": null,
+										"image": null,
+										"imageType": null,
+										"children": [
+											{
+												"id": 1273,
+												"name": "content2",
+												"layerFrame": {
+													"x": 0,
+													"y": 0,
+													"width": 1440,
+													"height": 2880
+												},
+												"maskFrame": null,
+												"image": {
+													"path": "images/content2.png",
+													"frame": {
+														"x": 213,
+														"y": 1058,
+														"width": 210,
+														"height": 210
+													}
+												},
+												"imageType": "png",
+												"children": [
+													
+												],
+												"modification": "60179541"
+											}
+										],
+										"modification": "1545667924"
+									},
+									{
+										"id": 1301,
+										"name": "layer3",
+										"layerFrame": {
+											"x": 0,
+											"y": 0,
+											"width": 1440,
+											"height": 2880
+										},
+										"maskFrame": null,
+										"image": null,
+										"imageType": null,
+										"children": [
+											{
+												"id": 1300,
+												"name": "content3",
+												"layerFrame": {
+													"x": 0,
+													"y": 0,
+													"width": 1440,
+													"height": 2880
+												},
+												"maskFrame": null,
+												"image": {
+													"path": "images/content3.png",
+													"frame": {
+														"x": 85,
+														"y": 1474,
+														"width": 293,
+														"height": 293
+													}
+												},
+												"imageType": "png",
+												"children": [
+													
+												],
+												"modification": "548595602"
+											}
+										],
+										"modification": "935727215"
+									},
+									{
+										"id": 1140,
+										"name": "layer4",
+										"layerFrame": {
+											"x": 0,
+											"y": 0,
+											"width": 1440,
+											"height": 2880
+										},
+										"maskFrame": null,
+										"image": null,
+										"imageType": null,
+										"children": [
+											{
+												"id": 1277,
+												"name": "content4",
+												"layerFrame": {
+													"x": 0,
+													"y": 0,
+													"width": 1440,
+													"height": 2880
+												},
+												"maskFrame": null,
+												"image": {
+													"path": "images/content4.png",
+													"frame": {
+														"x": 330,
+														"y": 1876,
+														"width": 201,
+														"height": 201
+													}
+												},
+												"imageType": "png",
+												"children": [
+													{
+														"id": 1139,
+														"name": "Group_1",
+														"layerFrame": {
+															"x": 0,
+															"y": 0,
+															"width": 1440,
+															"height": 2880
+														},
+														"maskFrame": null,
+														"image": {
+															"path": "images/Group_1.png",
+															"frame": {
+																"x": 370,
+																"y": 1953,
+																"width": 110,
+																"height": 48
+															}
+														},
+														"imageType": "png",
+														"children": [
+															
+														],
+														"modification": "2036824620"
+													}
+												],
+												"modification": "1927626020"
+											}
+										],
+										"modification": "2016562882"
+									},
+									{
+										"id": 1125,
+										"name": "layer5",
+										"layerFrame": {
+											"x": 0,
+											"y": 0,
+											"width": 1440,
+											"height": 2880
+										},
+										"maskFrame": null,
+										"image": null,
+										"imageType": null,
+										"children": [
+											{
+												"id": 1279,
+												"name": "content5",
+												"layerFrame": {
+													"x": 0,
+													"y": 0,
+													"width": 1440,
+													"height": 2880
+												},
+												"maskFrame": null,
+												"image": {
+													"path": "images/content5.png",
+													"frame": {
+														"x": 745,
+														"y": 1923,
+														"width": 222,
+														"height": 221
+													}
+												},
+												"imageType": "png",
+												"children": [
+													
+												],
+												"modification": "2045112169"
+											}
+										],
+										"modification": "44346547"
+									},
+									{
+										"id": 1166,
+										"name": "layer6",
+										"layerFrame": {
+											"x": 0,
+											"y": 0,
+											"width": 1440,
+											"height": 2880
+										},
+										"maskFrame": null,
+										"image": null,
+										"imageType": null,
+										"children": [
+											{
+												"id": 1281,
+												"name": "content6",
+												"layerFrame": {
+													"x": 0,
+													"y": 0,
+													"width": 1440,
+													"height": 2880
+												},
+												"maskFrame": null,
+												"image": {
+													"path": "images/content6.png",
+													"frame": {
+														"x": 1055,
+														"y": 1668,
+														"width": 301,
+														"height": 301
+													}
+												},
+												"imageType": "png",
+												"children": [
+													
+												],
+												"modification": "60179387"
+											}
+										],
+										"modification": "1559388047"
+									},
+									{
+										"id": 1133,
+										"name": "layer7",
+										"layerFrame": {
+											"x": 0,
+											"y": 0,
+											"width": 1440,
+											"height": 2880
+										},
+										"maskFrame": null,
+										"image": null,
+										"imageType": null,
+										"children": [
+											{
+												"id": 1283,
+												"name": "content7",
+												"layerFrame": {
+													"x": 0,
+													"y": 0,
+													"width": 1440,
+													"height": 2880
+												},
+												"maskFrame": null,
+												"image": {
+													"path": "images/content7.png",
+													"frame": {
+														"x": 1149,
+														"y": 1328,
+														"width": 220,
+														"height": 220
+													}
+												},
+												"imageType": "png",
+												"children": [
+													
+												],
+												"modification": "360119100"
+											}
+										],
+										"modification": "645382457"
+									},
+									{
+										"id": 1147,
+										"name": "layer8",
+										"layerFrame": {
+											"x": 0,
+											"y": 0,
+											"width": 1440,
+											"height": 2880
+										},
+										"maskFrame": null,
+										"image": null,
+										"imageType": null,
+										"children": [
+											{
+												"id": 1285,
+												"name": "content8",
+												"layerFrame": {
+													"x": 0,
+													"y": 0,
+													"width": 1440,
+													"height": 2880
+												},
+												"maskFrame": null,
+												"image": {
+													"path": "images/content8.png",
+													"frame": {
+														"x": 1014,
+														"y": 1008,
+														"width": 201,
+														"height": 201
+													}
+												},
+												"imageType": "png",
+												"children": [
+													
+												],
+												"modification": "1777708436"
+											}
+										],
+										"modification": "1508152646"
+									}
+								],
+								"modification": "1756843622"
+							}
+						],
+						"modification": "53341089"
+					},
+					{
+						"id": 1120,
+						"name": "background",
+						"layerFrame": {
+							"x": 0,
+							"y": 0,
+							"width": 1440,
+							"height": 2880
+						},
+						"maskFrame": null,
+						"image": {
+							"path": "images/background.png",
+							"frame": {
+								"x": 0,
+								"y": 0,
+								"width": 1440,
+								"height": 2880
+							}
+						},
+						"imageType": "png",
+						"children": [
+							
+						],
+						"modification": "807508677"
+					}
+				],
+				"modification": "891854392"
+			}
+		],
+		"modification": "348333091"
+	}
+]

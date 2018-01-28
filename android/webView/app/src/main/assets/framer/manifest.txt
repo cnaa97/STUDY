@@ -1,0 +1,160 @@
+app.coffee
+framer/backups/backup-2017-07-20 10.52.13.coffee
+framer/backups/backup-2017-07-21 11.13.04.coffee
+framer/backups/backup-2017-07-21 11.13.04.vekter
+framer/backups/backup-2017-07-21 11.28.04.coffee
+framer/backups/backup-2017-07-21 12.30.36.coffee
+framer/backups/backup-2017-07-21 12.33.36.coffee
+framer/backups/backup-2017-07-21 12.35.36.coffee
+framer/backups/backup-2017-07-21 12.43.36.coffee
+framer/backups/backup-2017-07-21 12.47.36.coffee
+framer/backups/backup-2017-07-21 12.48.36.coffee
+framer/backups/backup-2017-07-21 12.49.36.coffee
+framer/backups/backup-2017-07-21 12.56.36.coffee
+framer/backups/backup-2017-07-21 12.57.36.coffee
+framer/backups/backup-2017-07-21 12.59.36.coffee
+framer/backups/backup-2017-07-21 13.00.36.coffee
+framer/backups/backup-2017-07-21 13.35.28.coffee
+framer/backups/backup-2017-07-21 13.36.28.coffee
+framer/backups/backup-2017-07-21 13.39.28.coffee
+framer/backups/backup-2017-07-21 13.43.28.coffee
+framer/backups/backup-2017-07-21 15.09.52.coffee
+framer/backups/backup-2017-07-21 15.09.52.vekter
+framer/backups/backup-2017-07-21 15.11.52.coffee
+framer/backups/backup-2017-07-21 15.12.52.coffee
+framer/backups/backup-2017-07-21 15.13.52.coffee
+framer/backups/backup-2017-07-21 15.14.52.coffee
+framer/backups/backup-2017-07-21 15.18.52.coffee
+framer/backups/backup-2017-07-21 15.19.52.coffee
+framer/backups/backup-2017-07-24 06.45.08.coffee
+framer/backups/backup-2017-07-24 06.45.08.vekter
+framer/backups/backup-2017-07-24 06.47.08.coffee
+framer/backups/backup-2017-07-24 06.48.08.coffee
+framer/backups/backup-2017-07-24 06.49.08.coffee
+framer/backups/backup-2017-07-24 06.50.08.coffee
+framer/backups/backup-2017-07-24 08.33.14.coffee
+framer/backups/backup-2017-07-24 08.33.14.vekter
+framer/backups/backup-2017-07-24 08.34.14.coffee
+framer/backups/backup-2017-07-24 08.52.45.coffee
+framer/backups/backup-2017-07-24 08.52.45.vekter
+framer/backups/backup-2017-07-24 09.08.01.coffee
+framer/backups/backup-2017-07-24 09.08.01.vekter
+framer/coffee-script.js
+framer/config.json
+framer/design.vekter
+framer/framer.generated.js
+framer/framer.init.js
+framer/framer.js
+framer/framer.js.map
+framer/framer.modules.js
+framer/framer.vekter.js
+framer/images/cursor-active.png
+framer/images/cursor-active@2x.png
+framer/images/cursor.png
+framer/images/cursor@2x.png
+framer/images/icon-120.png
+framer/images/icon-152.png
+framer/images/icon-180.png
+framer/images/icon-192.png
+framer/images/icon-76.png
+framer/manifest.txt
+framer/preview.png
+framer/social-1200x630.png
+framer/social-800x600.png
+framer/social-80x80.png
+framer/social-880x460.png
+framer/style.css
+framer/version
+images/fingerprint.png
+images/phone.png
+images/phone_effect.png
+imported/home2@1x/framerps.log
+imported/home2@1x/images/air_circle.png
+imported/home2@1x/images/air_content.png
+imported/home2@1x/images/b_content1.png
+imported/home2@1x/images/b_content2.png
+imported/home2@1x/images/b_content3.png
+imported/home2@1x/images/b_content4.png
+imported/home2@1x/images/b_content5.png
+imported/home2@1x/images/b_content6.png
+imported/home2@1x/images/b_content7.png
+imported/home2@1x/images/b_content8.png
+imported/home2@1x/images/background.png
+imported/home2@1x/images/cal_circle.png
+imported/home2@1x/images/cal_content.png
+imported/home2@1x/images/content0.png
+imported/home2@1x/images/content1.png
+imported/home2@1x/images/content2.png
+imported/home2@1x/images/content3.png
+imported/home2@1x/images/content4.png
+imported/home2@1x/images/content5.png
+imported/home2@1x/images/content6.png
+imported/home2@1x/images/content7.png
+imported/home2@1x/images/content8.png
+imported/home2@1x/images/fingerprint.png
+imported/home2@1x/images/Group_1.png
+imported/home2@1x/images/time.png
+imported/home2@1x/images/top_indi.png
+imported/home2@1x/layers.json
+imported/home2@1x/layers.json.js
+imported/home@1x/framerps.log
+imported/home@1x/images/air_circle.png
+imported/home@1x/images/air_content.png
+imported/home@1x/images/air_l.png
+imported/home@1x/images/air_s.png
+imported/home@1x/images/alarm_s.png
+imported/home@1x/images/b_content1.png
+imported/home@1x/images/b_content2.png
+imported/home@1x/images/b_content3-2.png
+imported/home@1x/images/b_content3.png
+imported/home@1x/images/b_content4.png
+imported/home@1x/images/b_content5.png
+imported/home@1x/images/b_content6.png
+imported/home@1x/images/b_content7.png
+imported/home@1x/images/b_content8.png
+imported/home@1x/images/background.png
+imported/home@1x/images/big1.png
+imported/home@1x/images/big2.png
+imported/home@1x/images/cal_circle.png
+imported/home@1x/images/cal_content.png
+imported/home@1x/images/cal_l.png
+imported/home@1x/images/cal_s.png
+imported/home@1x/images/content0.png
+imported/home@1x/images/content1.png
+imported/home@1x/images/content2.png
+imported/home@1x/images/content3.png
+imported/home@1x/images/content4.png
+imported/home@1x/images/content5.png
+imported/home@1x/images/content6.png
+imported/home@1x/images/content7.png
+imported/home@1x/images/content8.png
+imported/home@1x/images/fingerprint.png
+imported/home@1x/images/Group_1.png
+imported/home@1x/images/layer0.png
+imported/home@1x/images/layer1.png
+imported/home@1x/images/layer2.png
+imported/home@1x/images/layer3.png
+imported/home@1x/images/layer4.png
+imported/home@1x/images/layer5.png
+imported/home@1x/images/layer6.png
+imported/home@1x/images/layer7.png
+imported/home@1x/images/layer8.png
+imported/home@1x/images/pic0_l.png
+imported/home@1x/images/pic0_s.png
+imported/home@1x/images/pic2_s.png
+imported/home@1x/images/pic3_s.png
+imported/home@1x/images/pic_s.png
+imported/home@1x/images/text_s.png
+imported/home@1x/images/time.png
+imported/home@1x/images/top_indi.png
+imported/home@1x/images/weather_l.png
+imported/home@1x/images/weather_s.png
+imported/home@1x/layers.json
+imported/home@1x/layers.json.js
+index.html
+index.js
+manifest.json
+modules/myModule.coffee
+sounds/Alert3.m4a
+sounds/Button7.m4a
+sounds/Success1.m4a
